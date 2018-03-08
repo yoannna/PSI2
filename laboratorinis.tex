@@ -1,113 +1,124 @@
 % !TEX program = XeLaTeX
 \documentclass{VUMIFPSkursinis}
-\usepackage{algorithmicx}
-\usepackage{algorithm}
-\usepackage{algpseudocode}
-\usepackage{amsfonts}
-\usepackage{amsmath}
-\usepackage{bm}
-\usepackage{caption}
-\usepackage{color}
-\usepackage{enumitem}
-\usepackage{float}
-\usepackage{graphicx}
-\usepackage{listings}
-\usepackage{subfig}
-\usepackage{wrapfig}
-% Titulinio aprašas
-\university{Vilniaus universitetas}
-\faculty{Matematikos ir informatikos fakultetas}
-\department{Programų sistemų katedra}
-\papertype{Laboratorinis darbas}
-\title{Skrydžių bilietų paieškos sistema}
-\titleineng{Plane tickets search system}
-\status{2 kurso 4 grupės studentai}
-\author{Vardenis Pavardenis}
-\secondauthor{Vardenis Pavardenis}
-\thirdauthor{Vardenis Pavardenis}
-\fourthauthor{Vardenis Pavardenis}
-\date{Vilnius – \the\year}
-
-% Nustatymai
-% \setmainfont{Palemonas}   % Pakeisti teksto šriftą į Palemonas (turi būti įdiegtas sistemoje)
-\bibliography{bibliografija}
-
-\begin{document}
-\maketitle
-  
-    \tableofcontents
-  
-    \sectionnonum{Įvadas}
-  
-    \section{Reikalavimai}
-        \subsection{Funkciniai reikalavimai}
-            \begin{enumerate}[label=FR\arabic*.]
-                \item Funkcinis...
-            \end{enumerate}
-        \subsection{Nefunkciniai reikalavimai}
-            \begin{enumerate}[label=NFR\arabic*.]
-                \item Neunkcinis...
-            \end{enumerate}
-  
-    \section{Struktūrinis dalykinės srities modelis}
-        \subsection{Esybių diagrama}
-
-        \subsection{Žodynas}
-
-            \begin{table}[H]\footnotesize
-            \centering
-            \caption{Dalykinės srities metaforų reikalavimai}
-                {\begin{tabular}{|l|l|} \hline
-                    Objektas & Metafora \\
-                    \hline
-                    \hline
-                    Vartotojas  & Asmuo, norintis nusipirkti skrydžio bilietą \\
-                    \hline
-                    Skrydžių bendrovė  & Įmonė, kuri suteikia skrydžio paslaugą \\
-                    \hline
-                    Paieška & Skrydžių bilietų radimas pagal įvestus paieškos kriterijus \\
-                    \hline
-                    Rūšiavimas & Maršruto pasirinkimas pagal norimą kriterijų: greitis, kaina, greičio ir kainos santykis \\
-                    \hline
-                    Filtravimas & Rezultatų pateikimas pagal norimus kriterijus: persėdimų skaičius, skrydžių bendrovės \\
-                    \hline
-                    Kainų žirklės & Kainos amplitudė \\
-                    \hline
-                    Užsakymų istorija & Įsigytų skrydžių bilietų peržiūra \\
-                    \hline
-                    Skrydžių informacija & Įsigytos kelionės duomenys: data, laikas, oro uostai \\
-                    \hline
-                    Paieškos rezultatai & Gautos užklausos rezultatai \\
-                    \hline
-                \end{tabular}}
-            \label{tab:table example}
-            \end{table}
-
-        \subsection{Reikalavimų - struktūrinio dalykinės srities modelio atsekamumo matrica}
-  
-    \section{Užduotys}
-        \subsection{Užduočių aprašymai}
-        
-            \begin{enumerate}[label=U\arabic*.]
-                \item Datos įvedimas
-                \item Kainos įvedimas
-                \item Miestų įvedimas
-                \item Esamos informacijos peržiūra
-                \item Paieškos rezultatų filtravimas
-                \item Paieškos rezultatų rūšiavimas
-            \end{enumerate}
-  
-        \subsection{Reikalavimų - užduočių atsekamumo matrica}
-  
-    \sectionnonum{Išvados}
-  
-    \sectionnonum{Šaltiniai}
-
-    \appendix  % Priedai
-    % Prieduose gali būti pateikiama pagalbinė, ypač darbo autoriaus savarankiškai
-    % parengta, medžiaga. Savarankiški priedai gali būti pateikiami ir
-    % Priedai taip pat numeruojami ir vadinami. Darbo tekstas
-    % su priedais susiejamas nuorodomis.
-  
-\end{document}
-  
+    \usepackage{algorithmicx}
+    \usepackage{algorithm}
+    \usepackage{algpseudocode}
+    \usepackage{amsfonts}
+    \usepackage{amsmath}
+    \usepackage{bm}
+    \usepackage{caption}
+    \usepackage{color}
+    \usepackage{enumitem}
+    \usepackage{float}
+    \usepackage{graphicx}
+    \usepackage{listings}
+    \usepackage{subfig}
+    \usepackage{wrapfig}
+    % Titulinio aprašas
+    \university{Vilniaus universitetas}
+    \faculty{Matematikos ir informatikos fakultetas}
+    \department{Programų sistemų katedra}
+    \papertype{Laboratorinis darbas}
+    \title{Skrydžių bilietų paieškos sistema}
+    \titleineng{Plane tickets search system}
+    \status{2 kurso 4 grupės studentai}
+    \author{Vardenis Pavardenis}
+    \secondauthor{Vardenis Pavardenis}
+    \thirdauthor{Vardenis Pavardenis}
+    \fourthauthor{Vardenis Pavardenis}
+    \date{Vilnius – \the\year}
+    
+    % Nustatymai
+    % \setmainfont{Palemonas}   % Pakeisti teksto šriftą į Palemonas (turi būti įdiegtas sistemoje)
+    \bibliography{bibliografija}
+    
+    \begin{document}
+    \maketitle
+      
+        \tableofcontents
+      
+        \sectionnonum{Įvadas}
+      
+        \section{Reikalavimai}
+            \subsection{Funkciniai reikalavimai}
+                \begin{enumerate}[label=\textbf{FR\arabic*}.]
+                    \item Funkcinis...
+                \end{enumerate}
+            \subsection{Nefunkciniai reikalavimai}
+                \begin{enumerate}[label=\textbf{NFR\arabic*}.]
+                    \item Turi būti palaikoma operacinė sistema su viena iš naršyklių:
+                    \begin{itemize}
+                        \item Mozilla Firefox (nuo 58 versijos)
+                        \item Google Chrome (nuo 64 versijos)
+                        \item Microsoft Internet Explorer (nuo 11 versijos)
+                        \item Microsoft Edge (nuo 41 versijos)
+                        \item Apple Safari (nuo 11 versijos)
+                    \end{itemize}
+                    \item Turi būti palaikomas HTTPS standartas.
+                    \item Programų sistema turi būti susieta su avia kompanijų bilietų pirkimo svetaine.
+                    \item Programų sistema turi turėti prieigą prie duomenų bazes, kurioje saugomi tvarkaraščiai, naudotojai, įvykiai ir užrašai.
+                    \item Programų sistema turi būti sukurta naudojant \textit{Angular 5}.
+                \end{enumerate}
+      
+        \section{Struktūrinis dalykinės srities modelis}
+            \subsection{Esybių diagrama}
+    
+            \subsection{Žodynas}
+    
+                \begin{table}[H]\footnotesize
+                \centering
+                \caption{Dalykinės srities metaforų reikalavimai}
+                    {\begin{tabular}{|l|l|} \hline
+                        Objektas & Metafora \\
+                        \hline
+                        \hline
+                        Vartotojas  & Asmuo, norintis nusipirkti skrydžio bilietą \\
+                        \hline
+                        Skrydžių bendrovė  & Įmonė, kuri suteikia skrydžio paslaugą \\
+                        \hline
+                        Paieška & Skrydžių bilietų radimas pagal įvestus paieškos kriterijus \\
+                        \hline
+                        Rūšiavimas & Maršruto pasirinkimas pagal norimą kriterijų: greitis, kaina, greičio ir kainos santykis \\
+                        \hline
+                        Filtravimas & Rezultatų pateikimas pagal norimus kriterijus: persėdimų skaičius, skrydžių bendrovės \\
+                        \hline
+                        Kainų žirklės & Kainos amplitudė \\
+                        \hline
+                        Užsakymų istorija & Įsigytų skrydžių bilietų peržiūra \\
+                        \hline
+                        Skrydžių informacija & Įsigytos kelionės duomenys: data, laikas, oro uostai \\
+                        \hline
+                        Paieškos rezultatai & Gautos užklausos rezultatai \\
+                        \hline
+                    \end{tabular}}
+                \label{tab:table example}
+                \end{table}
+    
+            \subsection{Reikalavimų - struktūrinio dalykinės srities modelio atsekamumo matrica}
+      
+        \section{Užduotys}
+            \subsection{Užduočių aprašymai}
+            
+                \begin{enumerate}[label=\textbf{U\arabic*}.]
+                    \item Datos įvedimas
+                    \item Kainos įvedimas
+                    \item Miestų įvedimas
+                    \item Esamos informacijos peržiūra
+                    \item Paieškos rezultatų filtravimas
+                    \item Paieškos rezultatų rūšiavimas
+                \end{enumerate}
+      
+            \subsection{Reikalavimų - užduočių atsekamumo matrica}
+      
+        \sectionnonum{Išvados}
+      
+        \sectionnonum{Šaltiniai}
+    
+        \appendix  % Priedai
+        % Prieduose gali būti pateikiama pagalbinė, ypač darbo autoriaus savarankiškai
+        % parengta, medžiaga. Savarankiški priedai gali būti pateikiami ir
+        % Priedai taip pat numeruojami ir vadinami. Darbo tekstas
+        % su priedais susiejamas nuorodomis.
+      
+    \end{document}
+      
