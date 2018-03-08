@@ -69,6 +69,8 @@
 \newcommand{\status}[1]{\def\@status{#1}}
 \newcommand{\titleineng}[1]{\def\@titleineng{#1}}
 \newcommand{\secondauthor}[1]{\def\@secondauthor{#1}}
+\newcommand{\thirdauthor}[1]{\def\@thirdauthor{#1}}
+\newcommand{\fourthauthor}[1]{\def\@fourthauthor{#1}}
 
 % Pirmos eilutės paragrafe atitraukimas 1 cm
 \setlength{\parindent}{1cm}
@@ -110,8 +112,6 @@
 \renewcommand\maketitle{\begin{titlepage}%
   \checkifdefined{@department}%
     {Tituliniame puslapyje nenurodyta katedra (komanda \protect\department)}
-  \checkifdefined{@supervisor}%
-    {Tituliniame puslapyje nenurodytas darbo vadovas (komanda \protect\supervisor)}
    ~
   \begin{center}
       {\setstretch{1.3}\large \MakeUppercase{\@university} \\
@@ -125,33 +125,20 @@
      \vskip 0.8cm
      {\large \@papertype}%
   \end{center}
-  \@ifundefined{@secondauthor}{
+  {
      \vskip 3cm
      \begin{flushright}
         \large
         \singlespacing
         {\begin{tabular}[t]{l l}%
         \medskip Atliko: &\; \@status \\
-        \medskip\bigskip   &\; \@author \hfill \@signatureplace \\
-        \bigskip Darbo vadovas: &\; \@supervisor \hfill  \@signatureplace \\
-        % Recenzentas: &\; \@reviewer \hfill \@signatureplace
+        \medskip   &\; \@author \\
+        \medskip   &\; \@secondauthor \\
+        \medskip   &\; \@thirdauthor \\
+        \medskip   &\; \@fourthauthor \hfill \\
         \end{tabular} \par}%
      \end{flushright}
      \vskip 4cm
-   }{
-     \vskip 2.8cm
-     \begin{flushright}
-        \large
-        \singlespacing
-        {\begin{tabular}[t]{l l}%
-        \medskip Atliko: &\; \@status \\
-        \bigskip   &\; \@author \hfill \@signatureplace \\
-        \medskip\bigskip &\; \@secondauthor \hfill \@signatureplace \\
-        \bigskip Darbo vadovas: &\; \@supervisor \hfill  \@signatureplace \\
-        % Recenzentas: &\; \@reviewer \hfill \@signatureplace
-        \end{tabular} \par}%
-     \end{flushright}
-     \vskip 3.8cm
    }
 
   \begin{center}
