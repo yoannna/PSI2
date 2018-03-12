@@ -38,11 +38,34 @@
         \tableofcontents
       
         \sectionnonum{Įvadas}
-      
+              Šiame dokumente bus aprašyti sistemos "Skrydžių bilietų paieška" reikalavimai, struktūrinės dalykinės srities modelis ir užduotys. Reikalavimai išskirstyti į funkcinius ir nefunkcinius. Funkciniai reikalavimai nurodo pagrindines sistemos funkcijas, o nefunkciniai - nurodo kaip tas funkcijas sistema turi atlikti. Struktūrinės dalykinės srities modelis yra pateikiamas UML klasių diagramomis kartu su žodynais - sąrašu esybių su jų aprašymais. Paskutiniame skyriuje pateikiamos sistemos užduotys su jų aprašymais.
         \section{Reikalavimai}
             \subsection{Funkciniai reikalavimai}
                 \begin{enumerate}[label=\textbf{FR\arabic*}.]
-                    \item Funkcinis...
+                    \item Sistema turi galėti atlikti skrydžių paiešką pagal paieškos kriterijus.
+                    \item Paieškos kriterijai sudaromi iš:
+                    \begin{itemize}
+                    	\item išvykimo ir atvykimo datų intervalų (nuo/iki),
+                    	\item skrydžio kainos intervalo (nuo/iki),
+                    	\item išvykimo ir atvykimo vietų.
+                    \end{itemize}
+                    \item Vartotojui norint įvesti datą, sistema turi pateikti mažą kalendorių arba lesti vartotojui savarankiškai įvesti datą.
+                    \item Paieškos formoje nieko neįvedus arba įvedus netinkamai, sistema turi pateikti vartotojui pavyzdį, kaip turėtų būti suvesti duomenys.
+                    \item Sistema turi turėti galimybę rūšiuoti ir/arba  filtruoti paieškos rezultatus.
+                    \item Sistema rūšiuoja skrydžius pagal:
+                    \begin{itemize}
+                    	\item greičiausius,
+                    	\item pigiausius,
+                    	\item optimaliausius (žr. \ref{optimal}).
+                    \end{itemize}
+                    \item Sistema filtruoja skrydžius pagal:
+                    \begin{itemize}
+                    	\item aviakomapanijas,
+                    	\item persėdimų skaičių.
+                    \end{itemize}
+                    \item Pasirinkus skrydį sistema turi parodyti detalią skrydžio informaciją.
+                    \item Sistema turi turėti galimybę vartotojui įsigyti skrydžio(-ų) bilietą, nukreipiant jį į atitinkamą aviakompanijos puslapį.
+                    \item Sistema atitinkamame lange vartotojui turi parodyti būsimus skrydžius, į kuriuos jis įsigijo bilietus.
                 \end{enumerate}
             \subsection{Nefunkciniai reikalavimai}
                 \begin{enumerate}[label=\textbf{NFR\arabic*}.]
@@ -55,9 +78,29 @@
                         \item Apple Safari (nuo 11 versijos)
                     \end{itemize}
                     \item Turi būti palaikomas HTTPS standartas.
-                    \item Programų sistema turi būti susieta su avia kompanijų bilietų pirkimo svetaine.
-                    \item Programų sistema turi turėti prieigą prie duomenų bazes, kurioje saugomi tvarkaraščiai, naudotojai, įvykiai ir užrašai.
-                    \item Programų sistema turi būti sukurta naudojant \textit{Angular 5}.
+                    \item Programų sistema turi būti susieta su aviakompanijų bilietų pirkimo svetaine.
+                    \item Programų sistema turi turėti prieigą prie duomenų bazės, kurioje saugomi tvarkaraščiai, naudotojai, įvykiai ir užrašai.
+                    \item Programų sistema turi būti sukurta naudojant HTML, CSS, JavaScript ir .NET C# programavimo kalbomis..
+                    \item Datos įvedamos ir vaizduojamos DD/MM/YYYY formatu.
+                    \item Išvykimo data turi būti anksčiau arba sutapti su atvykimo data.
+                    \item Skrydžio kainos turi būti teigiamos ir rodomos eurais.
+                    \item Mažiausia skrydžio kaina turi būti mažesnė už didžiausią skrydžio kainą.
+                    \item Išvykimo ir atvykimo vietos negali sutapti.
+                    \item Vieta vaizduojama arba vedama formatu "<miestas> <oro uosto trijų raidžių trumpinys>".
+                    \item \label{optimal} Optimalesnis skrydis yra tas kurio kainos ir skrydžio trukmės santykis yra mažesnis.
+                    \item Detali skrydžio informacija yra:
+                    \begin{itemize}
+                    	\item skrydžio išvykimo ir atvykimo datos ir laikai,
+                    	\item skrydžio išvykimo ir atvykimo šalys, miestai ir oro uosto trumpiniai.
+                    \end{itemize}
+                    \item Programų sistemos palaikymui yra būtina bent 426 x 240 (240p 16:9) ekrano rezoliucija ir ekrano dydis turi būti bent 4‘‘.
+                    \item Įvykus sistemos sutrikimui, vartotojo darbo funkcionalumas turi būti atkurtas penkių minučių laikotarpyje.
+                    \item Didžiausia leistina programų sistemos apkrova yra 5000 vartotojų, prisijungusių vienu metu.
+                    \item Paieškos rezultatai pateikiami ne lėčiau kaip per 20 sekundžių.
+                    \item Programa turi būti įdiegta ir paleista serveryje, kuris veikia visomis metų dienomis 24 valandas per parą.
+                    \item Sisteminės klaidos turi būti išsaugojamos klaidų žurnale, kuris turi būti tikrinamas bent kartą per vieną darbo dieną
+                    \item Praplėtus programų sistemos funkcionalumą būtina patikrinti atnaujinimus prieš leidžiant jais naudotis vartotojams
+                    \item Programų sistema negali pažeisti Europos Žmogaus teisių ir pagrindinių laisvių apsaugos konvencijos
                 \end{enumerate}
       
         \section{Struktūrinis dalykinės srities modelis}
@@ -72,7 +115,7 @@
                     \item Paieškos rezultatai - aprašo skrydžių paieškos rezultatus pritaikius paieškos kriterijus.
                     \item Skrydis - detaliai aprašo skrydžio informaciją. Skrydžio informacija susideda iš išvykimo vietos, atvykimo vietos, skrydžio datos, skrydžio trukmės ir kainos.
                     \item Skrydžių istorija - aprašo vartotojo užsakytų, įvykusių bei būsimų skrydžių informaciją.
-                    \item Filtravimo kriterijai - aprašo vartotojo nustatytus filtravimo kriterijus. Vartotjas gali pasirinkti norimas avia kompanijas ir pageidaujamų persėdimų skaičių
+                    \item Filtravimo kriterijai - aprašo vartotojo nustatytus filtravimo kriterijus. Vartotojas gali pasirinkti norimas avia kompanijas ir pageidaujamų persėdimų skaičių
                     \item Paieškos kriterijai - aprašo vartotojo pasirinktus skrydžio bilietų paieškos kriterijus. Vartotojas gali nustatyti išvykimo vietą, atvikimo vietą, maksimalią ir minimalią išvykimo bei atvykimo datą, maksimalią bei minimalią kainą.
                     \item Vartotojas - asmuo naviguojantis skrydžių paieškos platformoje ir ieškantis reikiamų skrydžių.
                 \end{enumerate}
@@ -92,10 +135,10 @@
                     \end{itemize}
 
                     \item \textbf{Rušiuoti paieškos rezultatus}\\
-                    Paieškos rezultatų lange, vartotojas pasirenka vieną iš trijų rušiavimo būdus atitinkančių mygtukų: "Greičiausias", "Pigiausias" arba "Optimalus". Paspaudus ant vieno iš jų, skrydžių paieškos rezultatai yra surūšiuojami pagal pasirinktą rušiavimo būdą.
+                    Paieškos rezultatų lange, vartotojas pasirenka vieną iš trijų rūšiavimo būdus atitinkančių mygtukų: "Greičiausias", "Pigiausias" arba "Optimalus". Paspaudus ant vieno iš jų, skrydžių paieškos rezultatai yra surūšiuojami pagal pasirinktą rušiavimo būdą.
                     \\\textbf{Alternatyvūs scenarijai:}
                     \begin{itemize}
-                        \item Surušiavus rezultatus tam tikru pasirinktu būdu, vartotojas paspaudžia ant jau pasirinktą rušiavimo būdą atitinkančio mygtuko. Rezultatai lieka suruošiuoti taip pat kaip ir prieš spaudžiant. 
+                        \item Surušiavus rezultatus tam tikru pasirinktu būdu, vartotojas paspaudžia ant jau pasirinktą rūšiavimo būdą atitinkančio mygtuko. Rezultatai lieka surūšiuoti taip pat kaip ir prieš spaudžiant. 
                     \end{itemize}
 
                     \item \textbf{Filtruoti paieškos rezultatus}\\
@@ -135,7 +178,7 @@
             \subsection{Reikalavimų - užduočių atsekamumo matrica}
       
         \sectionnonum{Išvados}
-      
+			Sistemos dokumentacija papildyta naujais reikalavimais, o kai kurie buvę reikalavimai patikslinti. Viskas daryta atsižvelgiant į užsakovų norus ir logika. Sistema yra paruošta kūrimo pradžiai.
         \sectionnonum{Šaltiniai}
     
         \appendix  % Priedai
