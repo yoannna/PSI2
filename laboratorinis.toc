@@ -25,5 +25,3 @@
 \contentsline {section}{Išvados}{13}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Šaltiniai}{14}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\MakeUppercase {Priedai}}{14}
