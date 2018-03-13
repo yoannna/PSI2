@@ -78,7 +78,13 @@
                             \item persėdimų skaičių.
                         \end{itemize}
                     \end{enumerate}
-                    \item Pasirinkus skrydį sistema turi parodyti detalią skrydžio informaciją.
+                    \item Pasirinkus skrydį sistema turi parodyti detalią skrydžio informaciją, kurioje yra:
+                    \begin{itemize}
+                    	\item skrydžio išvykimo ir atvykimo datos ir laikai,
+                    	\item skrydžio išvykimo ir atvykimo šalys, miestai ir oro uosto trumpiniai,
+						\item skrydžio trukmė,
+						\item skrydžio kaina.
+                    \end{itemize}
                     \item Sistema turi turėti galimybę vartotojui įsigyti skrydžio(-ų) bilietą, nukreipiant jį į atitinkamą aviakompanijos puslapį.
                     \item Sistema atitinkamame lange vartotojui turi parodyti būsimus skrydžius, į kuriuos jis įsigijo bilietus.
                 \end{enumerate}
@@ -93,8 +99,9 @@
                         \item Apple Safari (nuo 11 versijos)
                     \end{itemize}
                     \item Turi būti palaikomas HTTPS standartas.
+					\item Sistema turi būti lietuvių kalba.
                     \item Programų sistema turi būti susieta su aviakompanijų bilietų pirkimo svetaine.
-                    \item Programų sistema turi turėti prieigą prie duomenų bazės, kurioje saugomi tvarkaraščiai, naudotojai, įvykiai ir užrašai.
+                    \item Programų sistema turi turėti prieigą prie aviakompanijų duomenų bazių, kuriose saugomi tvarkaraščiai, naudotojai, įvykiai ir užrašai.
                     \item Datos įvedamos ir vaizduojamos DD/MM/YYYY formatu.
                     \item Išvykimo data turi būti anksčiau arba sutapti su atvykimo data.
                     \item Skrydžio kainos turi būti teigiamos ir rodomos eurais.
@@ -102,11 +109,6 @@
                     \item Išvykimo ir atvykimo vietos negali sutapti.
                     \item Vieta vaizduojama arba vedama formatu "<miestas> <oro uosto trijų raidžių trumpinys>".
                     \item \label{optimal} Optimalesnis skrydis yra tas kurio kainos ir skrydžio trukmės santykis yra mažesnis.
-                    \item Detali skrydžio informacija yra:
-                    \begin{itemize}
-                    	\item skrydžio išvykimo ir atvykimo datos ir laikai,
-                    	\item skrydžio išvykimo ir atvykimo šalys, miestai ir oro uosto trumpiniai.
-                    \end{itemize}
                     \item Programų sistemos palaikymui yra būtina bent 426 x 240 (240p 16:9) ekrano rezoliucija ir ekrano dydis turi būti bent 4‘‘.
                     \item Įvykus sistemos sutrikimui, vartotojo darbo funkcionalumas turi būti atkurtas penkių minučių laikotarpyje.
                     \item Didžiausia leistina programų sistemos apkrova yra 5000 vartotojų, prisijungusių vienu metu.
@@ -265,6 +267,17 @@
 
         \sectionnonum{Išvados}
 			Sistemos dokumentacija papildyta naujais reikalavimais, o kai kurie buvę reikalavimai patikslinti. Viskas daryta atsižvelgiant į užsakovų norus ir logika. Sistema yra paruošta kūrimo pradžiai.
+			
+			Pakeitimų sąrašas:
+			\begin{itemize}
+				\item pridėtas reikalvimas FR3, anksčiau vartotojas pats turėjo įvesti datą,
+				\item vietoje vieno rūšiavimo mygtuko, pridėti trys mygtukai,
+				\item apibrėžta kas yra detali skrydžio informacija,
+				\item tiksliau apibrėžtos operacinės sistemos ir naršyklės, kurias turi palaikyti sistema,
+				\item apibrėžta koks yra optimalesnis skrydis,
+				\item tiksliai nurodyta, kad sistema turi priėjimą prie aviakompanijų duomenų bazių,
+				\item nurodyta, kad sistema bus lietuvių kalba, anksčiau projekte nebuvo nurodyta lokalizacija.
+			\end{itemize}
         \sectionnonum{Šaltiniai}
     
         \appendix  % Priedai
