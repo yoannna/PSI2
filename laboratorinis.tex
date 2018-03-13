@@ -148,7 +148,7 @@
                     \hline
                         E2 &     &     &     &     &     & X   & X   & X    \\ 
                     \hline
-                        E3 &     &     &     &     &     &     &     &      \\ 
+                        E3 &     &     &     &     &     &     &     & X    \\ 
                     \hline
                         E4 &     &     &     &     & X   &     &     &      \\ 
                     \hline
@@ -158,30 +158,48 @@
                     \hline 
                     \end{tabular}
                 }
-                \label{tab:table example}
             \end{table}
       
         \section{Užduotys}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=1]{img/use_case}
+                \caption{Užduočių diagrama}
+                \label{Užduočių diagrama}
+            \end{figure}
             \subsection{Užduočių aprašymai}
-            
+                
                 \begin{enumerate}[label=\textbf{U\arabic*}.]
 
                     \item \textbf{Ieškoti skrydžių}\\
                     Vartotojas įveda išvykimo, atvykimo miestus. Pagal pageidavimą, įveda išvykimo ir atvykimo tinkamų laikų intervalus, kainos intervalą. Tada vartotojas paspaudžia ant mygtuko "Ieškoti" ir yra nukreipiamas į paieškos rezultatų langą, kur jam, lentelės pavidalu rodomi surasti skrydžiai pagal vartojojo įvestus kriterijus.
-                    \\\textbf{Alternatyvūs scenarijai:}
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[scale=0.8]{img/home}
+                        \caption{Pagrindinis puslapis}
+                        \label{Pagrindinis puslapis}
+                    \end{figure}
+    
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[scale=0.4]{img/search}
+                        \caption{Paieškos rezultatai}
+                        \label{rezultatai}
+                    \end{figure}
+                    \textbf{Alternatyvūs scenarijai:}
                     \begin{itemize}
                         \item Jei vartotojas neįveida atvykimo ir/ar išvykimo miestų, jam paspaudus ant mygtuko "Ieškoti" jis nėra nukreipiamas į rezultatų langą. Išvykimo ar atvykimo miesto įvedimo laukas su neįvesta reikšme (arba abu), paženklinami raudonai.
                     \end{itemize}
 
                     \item \textbf{Rušiuoti paieškos rezultatus}\\
-                    Paieškos rezultatų lange, vartotojas pasirenka vieną iš trijų rūšiavimo būdus atitinkančių mygtukų: "Greičiausias", "Pigiausias" arba "Optimalus". Paspaudus ant vieno iš jų, skrydžių paieškos rezultatai yra surūšiuojami pagal pasirinktą rušiavimo būdą.
+                    Paieškos rezultatų lange, vartotojas pasirenka vieną iš trijų rūšiavimo būdus atitinkančių mygtukų: "Greičiausias", "Pigiausias" arba "Optimalus" (žr. 4 pav.). Paspaudus ant vieno iš jų, skrydžių paieškos rezultatai yra surūšiuojami pagal pasirinktą rušiavimo būdą.
                     \\\textbf{Alternatyvūs scenarijai:}
                     \begin{itemize}
                         \item Surušiavus rezultatus tam tikru pasirinktu būdu, vartotojas paspaudžia ant jau pasirinktą rūšiavimo būdą atitinkančio mygtuko. Rezultatai lieka surūšiuoti taip pat kaip ir prieš spaudžiant. 
                     \end{itemize}
 
                     \item \textbf{Filtruoti paieškos rezultatus}\\
-                    Paieškos rezultatų lange, vartotojas pažymi jį dominantį persėdimų skaičių ir skrydžių bendrovę. Vartotojui pažymėjus konkrečią reikšmę ar to, ar ano, paieškos rezultatai yra iš karto atnaujinami, vaizduojant tik tuos skrydžius, kurie tenkina filtrų reikšmes.
+                    Paieškos rezultatų lange, vartotojas pažymi jį dominantį persėdimų skaičių ir skrydžių bendrovę (žr. 4 pav.). Vartotojui pažymėjus konkrečią reikšmę ar to, ar ano, paieškos rezultatai yra iš karto atnaujinami, vaizduojant tik tuos skrydžius, kurie tenkina filtrų reikšmes.
                     \\\textbf{Alternatyvūs scenarijai:}
                     \begin{itemize}
                         \item Vartotojui pakartotinai paspaudus ant jau prieš tai pažymėta filtro reikšmės, rezultatai iš karto atsinaujina, o konkretus pažymėtas filtras nuimamas. Kai visi filtrai yra nuimti, rezultatai atsivaizduoja netaikant jiems jokio filtravimo.
@@ -189,27 +207,33 @@
 
                     \item \textbf{Pereiti į bilieto pardavėjo svetainę}\\
                     Vartotojas atlieka skrydžių paiešką. Spaudžia ant pasirinkto skrydžio iš sąrašo ir yra nukeliamas į bilieto pardavėjo puslapį.
+                    \begin{figure}[H]
+                        \centering
+                        \includegraphics[scale=0.4]{img/buy}
+                        \caption{Paieškos rezultato detalės}
+                        \label{Paieškos rezultato detalės}
+                    \end{figure}
 
                     \item \textbf{Peržiūrėti būsimų skrydžių sąrašą}\\
                     Vartotojas spaudžia ant mygtuko "Būsimi skrydžiai". Atidaromas skrydžių, į kuriuos vartotojas yra įsigijęs bilietus sąrašas.
                     \begin{figure}[H]	
                         \centering
-                        \includegraphics[scale=0.4]{img/history}	
+                        \includegraphics[scale=0.6]{img/history}	
                         \caption{Būsimų skrydžių sąrašas}	
                         \label{Būsimų skrydžių sąrašas}	
                     \end{figure}
                     \textbf{Alternatyvūs scenarijai:}
                     \begin{itemize}
-                        \item Jei būsimų skrydžių sąrašas yra tuščias, sąrašo vietoje vartotojui parodoma žinutė "Sąrašas yra tuščias.";
+                        \item Jei būsimų skrydžių sąrašas yra tuščias, sąrašo vietoje vartotojui parodoma žinutė "Sąrašas yra tuščias".
                     \end{itemize}
 
                     \item \textbf{Peržiūrėti detalią skrydžio informaciją}\\
                     Vartotojas atidaro būsimų skrydžių sąraša. Spaudžia ant pasirinkto skrydžio iš sąrašo ir yra atidaromas dialogas su išsamia skrydžio informacija.
                     \begin{figure}[H]	
                         \centering
-                        \includegraphics[scale=0.4]{img/details}	
-                        \caption{Skrydžio informacija}	
-                        \label{Skrydžio informacija}	
+                        \includegraphics[scale=0.6]{img/details}	
+                        \caption{Būsimo skrydžio informacija}	
+                        \label{figure:Būsimo skrydžio informacija}	
                     \end{figure}
                     
                 \end{enumerate}
@@ -237,7 +261,6 @@
                     \hline 
                     \end{tabular}
                 }
-                \label{tab:table example}
             \end{table}
 
         \sectionnonum{Išvados}
