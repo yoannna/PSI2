@@ -293,7 +293,9 @@ INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
 INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
 INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
 INPUT img/use_case.png
-INPUT img/home.png
+INPUT img/oneway.png
+INPUT img/search_one_way.png
+INPUT img/bothways.png
 INPUT img/search.png
 INPUT img/buy.png
 INPUT img/history.png
