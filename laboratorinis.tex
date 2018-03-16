@@ -51,72 +51,78 @@
         \tableofcontents
       
         \sectionnonum{Įvadas}
-              Šiame dokumente bus aprašyti sistemos "Skrydžių bilietų paieška" reikalavimai, struktūrinės dalykinės srities modelis ir užduotys. Reikalavimai išskirstyti į funkcinius ir nefunkcinius. Funkciniai reikalavimai nurodo pagrindines sistemos funkcijas, o nefunkciniai - nurodo kaip tas funkcijas sistema turi atlikti. Struktūrinės dalykinės srities modelis yra pateikiamas UML klasių diagramomis kartu su žodynais - sąrašu esybių su jų aprašymais. Paskutiniame skyriuje pateikiamos sistemos užduotys su jų aprašymais.
+             Šiame dokumente bus aprašyti sistemos "Skrydžių bilietų paieška" reikalavimai, struktūrinės dalykinės srities modelis ir užduotys. Reikalavimai išskirstyti į funkcinius ir nefunkcinius. Funkciniai reikalavimai nurodo pagrindines sistemos funkcijas, o nefunkciniai - nurodo kaip tas funkcijas sistema turi atlikti. Struktūrinės dalykinės srities modelis yra pateikiamas UML klasių diagramomis kartu su žodynais - sąrašu esybių su jų aprašymais. Paskutiniame skyriuje pateikiamos sistemos užduotys su jų aprašymais.
         \section{Reikalavimai}
+			Šiame skyriuje išvardyti programų sistemos funkciniai ir nefunkciniai reikalavimai.
             \subsection{Funkciniai reikalavimai}
                 \begin{enumerate}[label=\textbf{FR\arabic*}.]
-                    \item Sistema turi galėti atlikti skrydžių paiešką pagal paieškos kriterijus.
-                    \item Paieškos kriterijai sudaromi iš:
-                    \begin{itemize}
-                    	\item išvykimo ir atvykimo datų intervalų (nuo/iki),
-                    	\item skrydžio kainos intervalo (nuo/iki),
-                    	\item išvykimo ir atvykimo vietų.
-                    \end{itemize}
-                    \item Vartotojui norint įvesti datą, sistema turi pateikti mažą kalendorių arba leisti vartotojui savarankiškai įvesti datą.
-                    \item Paieškos formoje nieko neįvedus arba įvedus netinkamai, sistema turi pateikti vartotojui pavyzdį, kaip turėtų būti suvesti duomenys.
-                    \item Sistema turi turėti galimybę rūšiuoti ir/arba  filtruoti paieškos rezultatus.
-                    \begin{enumerate}[label*=\textbf{\arabic*}.]
-                        \item Sistema rūšiuoja skrydžius pagal:
-                        \begin{itemize}
-                            \item greičiausius,
-                            \item pigiausius,
-                            \item optimaliausius (žr. \ref{optimal}).
-                        \end{itemize}
-                        \item Sistema filtruoja skrydžius pagal:
-                        \begin{itemize}
-                            \item aviakomapanijas,
-                            \item persėdimų skaičių.
-                        \end{itemize}
-                    \end{enumerate}
-                    \item Pasirinkus skrydį sistema turi parodyti detalią skrydžio informaciją, kurioje yra:
-                    \begin{itemize}
-                    	\item skrydžio išvykimo ir atvykimo datos ir laikai,
-                    	\item skrydžio išvykimo ir atvykimo šalys, miestai ir oro uosto trumpiniai,
-						\item skrydžio trukmė,
-						\item skrydžio kaina.
-                    \end{itemize}
-                    \item Sistema turi turėti galimybę vartotojui įsigyti skrydžio(-ų) bilietą, nukreipiant jį į atitinkamą aviakompanijos puslapį.
-                    \item Sistema atitinkamame lange vartotojui turi parodyti būsimus skrydžius, į kuriuos jis įsigijo bilietus.
+                	\subsubsection{Bendri sistemos funkciniai reikalavimai}
+                		\item Sistema turi atlikti skrydžių paiešką pagal:
+                    	\begin{itemize}
+                    		\item išvykimo ir atvykimo datų intervalus (nuo/iki),
+                    		\item skrydžio kainos intervalą (nuo/iki),
+                    		\item išvykimo ir atvykimo vietas,
+							\item skrydis į vieną ar abi puses.
+                    	\end{itemize}
+                    	\item Sistema turi turėti galimybę rūšiuoti ir/arba  filtruoti paieškos rezultatus.
+                    	\begin{enumerate}[label*=\textbf{\arabic*}.]
+                        	\item Sistema rūšiuoja skrydžius pagal:
+                        	\begin{itemize}
+                            	\item greičiausius,
+                            	\item pigiausius,
+                            	\item optimaliausius (žr. \ref{optimalus}).
+                        	\end{itemize}
+                        	\item Sistema filtruoja skrydžius pagal:
+                        	\begin{itemize}
+                            	\item aviakompanijas,
+                            	\item persėdimų skaičių.
+                        	\end{itemize}
+                    	\end{enumerate}
+                    	\item \label{skrydzio_info} Pasirinkus skrydį sistema turi parodyti detalią skrydžio informaciją, kurioje yra:
+                    	\begin{itemize}
+                    		\item skrydžio išvykimo ir atvykimo datos ir laikai,
+                    		\item skrydžio išvykimo ir atvykimo šalys, miestai ir oro uosto trumpiniai,
+							\item skrydžio trukmė,
+							\item skrydžio kaina.
+                    	\end{itemize}
+                    	\item Sistemoje turi būti galimybė vartotojui įsigyti skrydžio(-ų) bilietą, nukreipiant jį į atitinkamą aviakompanijos puslapį.
+                    	\item Sistema atitinkamame lange vartotojui turi parodyti būsimus skrydžius, į kuriuos jis įsigijo bilietus.
+                	\subsubsection{Papildomi funkciniai reikalavimai}
+                    	\item \label{datos_ivedimas} Vartotojui norint įvesti datą, sistema turi pateikti mažą kalendorių arba leisti vartotojui savarankiškai įvesti datą.
+                    	\item Paieškos formoje nieko neįvedus arba įvedus netinkamai, sistema turi pateikti vartotojui pavyzdį, kaip turėtų būti suvesti duomenys.
                 \end{enumerate}
             \subsection{Nefunkciniai reikalavimai}
                 \begin{enumerate}[label=\textbf{NFR\arabic*}.]
-                    \item Turi būti palaikoma operacinė sistema su viena iš naršyklių:
-                    \begin{itemize}
-                        \item Mozilla Firefox (nuo 58 versijos)
-                        \item Google Chrome (nuo 64 versijos)
-                        \item Microsoft Internet Explorer (nuo 11 versijos)
-                        \item Microsoft Edge (nuo 41 versijos)
-                        \item Apple Safari (nuo 11 versijos)
-                    \end{itemize}
-                    \item Turi būti palaikomas HTTPS standartas.
-					\item Sistema turi būti lietuvių kalba.
-                    \item Programų sistema turi būti susieta su aviakompanijų bilietų pirkimo svetaine.
-                    \item Programų sistema turi turėti prieigą prie aviakompanijų duomenų bazių, kuriose saugomi tvarkaraščiai, naudotojai, įvykiai ir užrašai.
-                    \item Datos įvedamos ir vaizduojamos DD/MM/YYYY formatu.
-                    \item Išvykimo data turi būti anksčiau arba sutapti su atvykimo data.
-                    \item Skrydžio kainos turi būti teigiamos ir rodomos eurais.
-                    \item Mažiausia skrydžio kaina turi būti mažesnė už didžiausią skrydžio kainą.
-                    \item Išvykimo ir atvykimo vietos negali sutapti.
-                    \item Vieta vaizduojama arba vedama formatu "<miestas> <oro uosto trijų raidžių trumpinys>".
-                    \item \label{optimal} Optimalesnis skrydis yra tas kurio kainos ir skrydžio trukmės santykis yra mažesnis.
-                    \item Programų sistemos palaikymui yra būtina bent 426 x 240 (240p 16:9) ekrano rezoliucija ir ekrano dydis turi būti bent 4‘‘.
-                    \item Įvykus sistemos sutrikimui, vartotojo darbo funkcionalumas turi būti atkurtas penkių minučių laikotarpyje.
-                    \item Didžiausia leistina programų sistemos apkrova yra 5000 vartotojų, prisijungusių vienu metu.
-                    \item Paieškos rezultatai pateikiami ne lėčiau kaip per 20 sekundžių.
-                    \item Programa turi būti įdiegta ir paleista serveryje, kuris veikia visomis metų dienomis 24 valandas per parą.
-                    \item Sisteminės klaidos turi būti išsaugojamos klaidų žurnale, kuris turi būti tikrinamas bent kartą per vieną darbo dieną
-                    \item Praplėtus programų sistemos funkcionalumą būtina patikrinti atnaujinimus prieš leidžiant jais naudotis vartotojams
-                    \item Programų sistema negali pažeisti Europos Žmogaus teisių ir pagrindinių laisvių apsaugos konvencijos
+                	\subsubsection{Bendri sistemos nefunkciniai reikalavimai}
+                		\item \label{lokalizacija} Sistema turi būti lietuvių kalba.
+                		\item Programų sistema turi būti susieta su palaikomų aviakompanijų bilietų pirkimo svetainėmis.
+                		\item \label{avia_db} Programų sistema turi turėti prieigą prie aviakompanijų duomenų bazių, kuriose saugomi tvarkaraščiai, naudotojai, įvykiai ir užrašai.
+                		\item Programų sistema negali pažeisti Europos Žmogaus teisių ir pagrindinių laisvių apsaugos konvencijos
+                	\subsubsection{Sistemos palaikymo ir veikimo reikalavimai}                	
+                    	\item \label{operacines_sistemos} Sistema turi palaikyti tas operacines sistemas, kurios palaiko:
+                    	\begin{itemize}
+                        	\item Mozilla Firefox (nuo 58 versijos)
+                        	\item Google Chrome (nuo 64 versijos)
+                        	\item Microsoft Internet Explorer (nuo 11 versijos)
+                        	\item Microsoft Edge (nuo 41 versijos)
+                       	 	\item Apple Safari (nuo 11 versijos)
+                    	\end{itemize}
+                    	\item Sistema turi palaikyti HTTPS standartą.
+                    	\item Programų sistemos palaikymui yra būtina bent 426 x 240 (240p 16:9) ekrano rezoliucija ir ekrano dydis turi būti bent 4‘‘.
+                    	\item Įvykus sistemos sutrikimui, vartotojo darbo funkcionalumas turi būti atkurtas penkių minučių laikotarpyje.
+                   	 	\item Didžiausia leistina programų sistemos apkrova yra 5000 vartotojų, prisijungusių vienu metu.
+                    	\item Paieškos rezultatai pateikiami ne lėčiau kaip per 20 sekundžių.
+                    	\item Programa turi būti įdiegta ir paleista serveryje, kuris veikia visomis metų dienomis 24 valandas per parą.
+                    	\item Sisteminės klaidos turi būti išsaugojamos klaidų žurnale, kuris turi būti tikrinamas bent kartą per vieną darbo dieną
+                    	\item Praplėtus programų sistemos funkcionalumą būtina patikrinti atnaujinimus prieš leidžiant jais naudotis vartotojams
+					\subsubsection{Reikšmių reikalavimai}
+                    	\item Datos įvedamos ir vaizduojamos DD/MM/YYYY formatu.
+                    	\item Išvykimo data turi būti anksčiau arba sutapti su atvykimo data.
+                    	\item Skrydžio kainos turi būti teigiamos ir rodomos eurais.
+                    	\item Mažiausia skrydžio kaina turi būti mažesnė už didžiausią skrydžio kainą.
+                    	\item Išvykimo ir atvykimo vietos negali sutapti.
+                    	\item Vieta vaizduojama arba vedama formatu "<miestas> <oro uosto trijų raidžių trumpinys> <(nebūtina), šalis>".
+                    	\item \label{optimalus} Optimalesnis skrydis yra tas kurio kainos ir skrydžio trukmės santykis yra mažesnis.
                 \end{enumerate}
       
         \section{Struktūrinis dalykinės srities modelis}
@@ -266,18 +272,18 @@
             \end{table}
 
         \sectionnonum{Išvados}
-			Sistemos dokumentacija papildyta naujais reikalavimais, o kai kurie buvę reikalavimai patikslinti. Viskas daryta atsižvelgiant į užsakovų norus ir logika. Sistema yra paruošta kūrimo pradžiai.
-			
+			Sistema paruošta kūrimo pradžiai.
+		\sectionnonum{Pakeitimų sąrašas}
 			Pakeitimų sąrašas:
-			\begin{itemize}
-				\item pridėtas reikalvimas FR3, anksčiau vartotojas pats turėjo įvesti datą,
+			\begin{enumerate}
+				\item pridėtas reikalavimas \ref{datos_ivedimas}, anksčiau vartotojas pats turėjo įvesti datą,
 				\item vietoje vieno rūšiavimo mygtuko, pridėti trys mygtukai,
-				\item apibrėžta kas yra detali skrydžio informacija,
-				\item tiksliau apibrėžtos operacinės sistemos ir naršyklės, kurias turi palaikyti sistema,
-				\item apibrėžta koks yra optimalesnis skrydis,
-				\item tiksliai nurodyta, kad sistema turi priėjimą prie aviakompanijų duomenų bazių,
-				\item nurodyta, kad sistema bus lietuvių kalba, anksčiau projekte nebuvo nurodyta lokalizacija.
-			\end{itemize}
+				\item apibrėžta kas yra detali skrydžio informacija (žr. \ref{skrydzio_info}),
+				\item tiksliau apibrėžtos operacinės sistemos ir naršyklės, kurias turi palaikyti sistema (žr. \ref{operacines_sistemos}),
+				\item apibrėžta koks yra optimalesnis skrydis (žr. \ref{optimalus}),
+				\item tiksliai nurodyta, kad sistema turi priėjimą prie aviakompanijų duomenų bazių (žr. \ref{avia_db}),
+				\item nurodyta, kad sistema bus lietuvių kalba, anksčiau projekte nebuvo nurodyta lokalizacija (žr. \ref{lokalizacija}).
+			\end{enumerate}
         \sectionnonum{Šaltiniai}
             \begin{itemize}
                 \item Use Case Driven Object Modeling with UMLTheory and Practice 
