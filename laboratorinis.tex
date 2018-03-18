@@ -135,7 +135,7 @@
             \subsection{Klasių diagrama}
                 \begin{figure}[H]
                     \centering
-                    \includegraphics[scale=0.6]{img/class_diagram}
+                    \includegraphics[scale=0.5]{img/class_diagram}
                     \caption{Klasių diagrama}
                     \label{klasių diagrama}
                 \end{figure}
@@ -188,19 +188,19 @@
                 \begin{enumerate}[label=\textbf{U\arabic*}.]
 
                     \item \textbf{Ieškoti skrydžių į vieną pusę}\\
-                    Vartotojas įveda išvykimo, atvykimo miestus. Pagal pageidavimą, įveda tinkamą išvykimo laiko intervalą, kainos intervalą. Tada vartotojas paspaudžia ant mygtuko „Ieškoti“ ir yra nukreipiamas į paieškos rezultatų langą, kur jam, lentelės pavidalu rodomi surasti skrydžiai pagal vartojojo įvestus kriterijus.
+                    Vartotojas įveda išvykimo, atvykimo miestus. Pagal pageidavimą, įveda tinkamą išvykimo laiko intervalą, kainos intervalą. Tada vartotojas paspaudžia ant mygtuko „Ieškoti“ (žr. \ref{home_page_one_way}pav.) ir yra nukreipiamas į paieškos rezultatų langą, kur jam, lentelės pavidalu rodomi surasti skrydžiai pagal vartojojo įvestus kriterijus (žr. \ref{results_one_way} pav.).
                     \begin{figure}[H]
                         \centering
                         \includegraphics[scale=0.8]{img/oneway}
                         \caption{Pagrindinis puslapis}
-                        \label{Pagrindinis puslapis}
+                        \label{home_page_one_way}
                     \end{figure}
     
                     \begin{figure}[H]
                         \centering
                         \includegraphics[scale=0.4]{img/search_one_way}
                         \caption{Paieškos rezultatai}
-                        \label{rezultatai}
+                        \label{results_one_way}
                     \end{figure}
                     \textbf{Alternatyvūs scenarijai:}
                     \begin{itemize}
@@ -208,19 +208,19 @@
                     \end{itemize}
 
                     \item \textbf{Ieškoti skrydžių į abi puses}\\
-                    Vartotojas įveda išvykimo, atvykimo miestus. Pažymi varnele, kad renkasi skrydį atgal. Pagal pageidavimą, įveda išvykimo ir atvykimo tinkamų laikų intervalus, kainos intervalą. Tada vartotojas paspaudžia ant mygtuko „Ieškoti“ ir yra nukreipiamas į paieškos rezultatų langą, kur jam, lentelės pavidalu rodomi surasti skrydžiai pagal vartojojo įvestus kriterijus.
+                    Vartotojas įveda išvykimo, atvykimo miestus. Pažymi varnele, kad renkasi skrydį atgal. Pagal pageidavimą, įveda išvykimo ir atvykimo tinkamų laikų intervalus, kainos intervalą. Tada vartotojas paspaudžia ant mygtuko „Ieškoti“ (žr. \ref{home_page_both_ways}pav.) ir yra nukreipiamas į paieškos rezultatų langą, kur jam, lentelės pavidalu rodomi surasti skrydžiai pagal vartojojo įvestus kriterijus (žr. \ref{results_both_ways} pav.).
                     \begin{figure}[H]
                         \centering
                         \includegraphics[scale=0.8]{img/bothways}
                         \caption{Pagrindinis puslapis}
-                        \label{Pagrindinis puslapis}
+                        \label{home_page_both_ways}
                     \end{figure}
     
                     \begin{figure}[H]
                         \centering
                         \includegraphics[scale=0.4]{img/search}
                         \caption{Paieškos rezultatai}
-                        \label{rezultatai}
+                        \label{results_both_ways}
                     \end{figure}
                     \textbf{Alternatyvūs scenarijai:}
                     \begin{itemize}
@@ -228,73 +228,81 @@
                     \end{itemize}
 
                     \item \textbf{Rušiuoti paieškos rezultatus}\\
-                    Paieškos rezultatų lange, vartotojas pasirenka vieną iš trijų rūšiavimo būdus atitinkančių mygtukų: „Greičiausias“, „Pigiausias“ arba „Optimalus“ (žr. 4 pav.). Paspaudus ant vieno iš jų, skrydžių paieškos rezultatai yra surūšiuojami pagal pasirinktą rušiavimo būdą.
+                    Paieškos rezultatų lange, vartotojas pasirenka vieną iš trijų rūšiavimo būdus atitinkančių mygtukų: „Greičiausias“, „Pigiausias“ arba „Optimalus“ (žr. \ref{results_both_ways}pav., \ref{results_one_way} pav.). Paspaudus ant vieno iš jų, skrydžių paieškos rezultatai yra surūšiuojami pagal pasirinktą rušiavimo būdą.
                     \\\textbf{Alternatyvūs scenarijai:}
                     \begin{itemize}
                         \item Surušiavus rezultatus tam tikru pasirinktu būdu, vartotojas paspaudžia ant jau pasirinktą rūšiavimo būdą atitinkančio mygtuko. Rezultatai lieka surūšiuoti taip pat kaip ir prieš spaudžiant. 
                     \end{itemize}
 
                     \item \textbf{Filtruoti paieškos rezultatus}\\
-                    Paieškos rezultatų lange, vartotojas pažymi jį dominantį persėdimų skaičių ir skrydžių bendrovę (žr. 4 pav.). Vartotojui pažymėjus konkrečią reikšmę ar to, ar ano, paieškos rezultatai yra iš karto atnaujinami, vaizduojant tik tuos skrydžius, kurie tenkina filtrų reikšmes.
+                    Paieškos rezultatų lange, vartotojas pažymi jį dominantį persėdimų skaičių ir skrydžių bendrovę (žr. \ref{results_both_ways}pav., \ref{results_one_way}pav.). Vartotojui pažymėjus konkrečią reikšmę ar to, ar ano, paieškos rezultatai yra iš karto atnaujinami, vaizduojant tik tuos skrydžius, kurie tenkina filtrų reikšmes.
                     \\\textbf{Alternatyvūs scenarijai:}
                     \begin{itemize}
                         \item Vartotojui pakartotinai paspaudus ant jau prieš tai pažymėta filtro reikšmės, rezultatai iš karto atsinaujina, o konkretus pažymėtas filtras nuimamas. Kai visi filtrai yra nuimti, rezultatai atsivaizduoja netaikant jiems jokio filtravimo.
                     \end{itemize}
 
-                    \item \textbf{Pereiti į bilieto pardavėjo svetainę}\\
-                    Vartotojas atlieka skrydžių paiešką. Spaudžia ant pasirinkto skrydžio iš sąrašo ir yra nukeliamas į bilieto pardavėjo puslapį.
+                    \item \textbf{Peržiūrėti detalią paieškos rezultato informaciją}\\
+                    Vartotojas atlieka skrydžių paiešką. Spaudžia ant pasirinkto skrydžio iš sąrašo ir yra atidaromas dialogas su detlia skrydžio informacija (žr. \ref{search_result_details}pav.).
                     \begin{figure}[H]
                         \centering
                         \includegraphics[scale=0.4]{img/buy}
                         \caption{Paieškos rezultato detalės}
-                        \label{Paieškos rezultato detalės}
+                        \label{search_result_details}
                     \end{figure}
 
+                    \item \textbf{Pereiti į bilieto pardavėjo svetainę}\\
+                    Vartotojas atlieka skrydžių paiešką. Spaudžia ant pasirinkto skrydžio. Atsidariusiame dialoge spaudžia mygtuką „Pirkti“ (žr. \ref{search_result_details}pav.) ir yra nukeliamas į bilieto pardavėjo puslap.
+
                     \item \textbf{Peržiūrėti būsimų skrydžių sąrašą}\\
-                    Vartotojas spaudžia ant mygtuko „Būsimi skrydžiai“. Atidaromas skrydžių, į kuriuos vartotojas yra įsigijęs bilietus sąrašas.
+                    Vartotojas spaudžia ant mygtuko „Būsimi skrydžiai“. Atidaromas skrydžių, į kuriuos vartotojas yra įsigijęs bilietus sąrašas (žr. \ref{upcoming}pav.).
                     \begin{figure}[H]	
                         \centering
                         \includegraphics[scale=0.6]{img/history}	
                         \caption{Būsimų skrydžių sąrašas}	
-                        \label{Būsimų skrydžių sąrašas}	
+                        \label{upcoming}	
                     \end{figure}
                     \textbf{Alternatyvūs scenarijai:}
                     \begin{itemize}
                         \item Jei būsimų skrydžių sąrašas yra tuščias, sąrašo vietoje vartotojui parodoma žinutė „Sąrašas yra tuščias“.
                     \end{itemize}
 
-                    \item \textbf{Peržiūrėti detalią skrydžio informaciją}\\
-                    Vartotojas atidaro būsimų skrydžių sąraša. Spaudžia ant pasirinkto skrydžio iš sąrašo ir yra atidaromas dialogas su išsamia skrydžio informacija.
+                    \item \textbf{Peržiūrėti detalią būsimo skrydžio informaciją}\\
+                    Vartotojas atidaro būsimų skrydžių sąraša. Spaudžia ant pasirinkto skrydžio iš sąrašo ir yra atidaromas dialogas su išsamia skrydžio informacija (žr. \ref{upcoming_fligth_details}pav.).
                     \begin{figure}[H]	
                         \centering
                         \includegraphics[scale=0.6]{img/details}	
                         \caption{Būsimo skrydžio informacija}	
-                        \label{figure:Būsimo skrydžio informacija}	
+                        \label{upcoming_fligth_details}	
                     \end{figure}
                     
                 \end{enumerate}
       
             \subsection{Reikalavimų - užduočių atsekamumo matrica}
-            Šiame poskyryje pateikiama reikalavimų - užduočių atsekamumo matrica. Matricoje pavaizduotos užduotys(Use cases) bei reikalavimai. Ši matrica padeda atsekti kurios užduotys įgyvendina atitinkamus reikalavimus.
+            Šiame poskyryje pateikiama reikalavimų - užduočių atsekamumo matrica. Matricoje pavaizduotos užduotys(Use cases) bei reikalavimai. Ši matrica padeda atsekti kurios užduotys įgyvendina atitinkamus reikalavimus (žr. \ref{matrix2}pav.).
             \begin{table}[H]\footnotesize
                 \centering
                 \caption{Reikalavimų - užduočių atsekamumo matrica}
+                \label{matrix2}
                 {
                     \begin{tabular}{|c|c|c|c|c|c|c|c|c| }
                     \hline
                         & FR1 & FR2 & FR3 & FR4 & FR5 & FR6 & FR7 & FR8 \\ 
                     \hline
-                     U1 & X   & X   & X   & X   &     &     &     &      \\  
+                     U1 & X   &     &     &     &     &     & X   & X    \\ 
                     \hline
-                     U2 &     &     &     &     & X   &     &     &      \\ 
+                     U2 &     & X   &     &     &     &     & X   & X    \\  
                     \hline
-                     U3 &     &     &     &     & X   &     &     &      \\ 
+                     U3 &     &     & X   &     &     &     &     &      \\ 
                     \hline
-                     U4 &     &     &     &     &     &     & X   &      \\ 
+                     U4 &     &     & X   &     &     &     &     &      \\ 
                     \hline
-                     U5 &     &     &     &     &     &     &     & X    \\ 
+                     U5 &     &     &     & X   &     &     &     &      \\ 
                     \hline
-                     U6 &     &     &     &     &     & X   &     & X    \\ 
+                     U6 &     &     &     &     & X   &     &     &      \\ 
+                    \hline
+                     U7 &     &     &     &     &     & X   &     &      \\ 
+                    \hline
+                     U8 &     &     &     & X   &     &     &     &      \\ 
                     \hline 
                     \end{tabular}
                 }
