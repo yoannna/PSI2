@@ -57,12 +57,17 @@
             \subsection{Funkciniai reikalavimai}
                 \begin{enumerate}[label=\textbf{FR\arabic*}.]
                 	\subsubsection{Bendri sistemos funkciniai reikalavimai}
-                		\item Sistema turi atlikti skrydžių paiešką pagal:
+                		\item \label{viena_puse} Sistema turi atlikti skrydžių į vieną pusę paiešką pagal:
+						\begin{itemize}
+                    		\item išvykimo datos intervalą (nuo/iki),
+                    		\item skrydžio kainos intervalą (nuo/iki),
+                    		\item išvykimo ir atvykimo vietas,
+                    	\end{itemize}
+						\item Sistema turi atlikti skrydžių į dvi puses paiešką pagal:
                     	\begin{itemize}
                     		\item išvykimo ir atvykimo datų intervalus (nuo/iki),
                     		\item skrydžio kainos intervalą (nuo/iki),
                     		\item išvykimo ir atvykimo vietas,
-							\item skrydis į vieną ar abi puses.
                     	\end{itemize}
                     	\item Sistema turi turėti galimybę rūšiuoti ir/arba  filtruoti paieškos rezultatus.
                     	\begin{enumerate}[label*=\textbf{\arabic*}.]
@@ -306,7 +311,8 @@
 				\item tiksliau apibrėžtos operacinės sistemos ir naršyklės, kurias turi palaikyti sistema (žr. \ref{operacines_sistemos}),
 				\item apibrėžta koks yra optimalesnis skrydis (žr. \ref{optimalus}),
 				\item tiksliai nurodyta, kad sistema turi priėjimą prie aviakompanijų duomenų bazių (žr. \ref{avia_db}),
-				\item nurodyta, kad sistema bus lietuvių kalba, anksčiau projekte nebuvo nurodyta lokalizacija (žr. \ref{lokalizacija}).
+				\item nurodyta, kad sistema bus lietuvių kalba, anksčiau projekte nebuvo nurodyta lokalizacija (žr. \ref{lokalizacija}),
+				\item suteikta galimybė vartotojui ieškoti skrydžio tik į vieną pusę (žr. \ref{viena_puse}).
 			\end{enumerate}
         \sectionnonum{Šaltiniai}
         Analizuojant kuriamą sistemą, kuriant sistemos reikalavimus, apibrėžiant struktūrinį dalykinės sryties modelį bei aprašant sistemos atliekamas užduotis buvo remtasi šia literatūra:
