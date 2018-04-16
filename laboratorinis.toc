@@ -32,8 +32,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.}Reikalavimų - užduočių atsekamumo matrica}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Išvados}{14}
+\contentsline {section}{\numberline {4.}Techninė analizė}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Pakeitimų sąrašas}{15}
+\contentsline {subsection}{\numberline {4.1.}Komponentinė sandara}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Šaltiniai}{16}
+\contentsline {subsection}{\numberline {4.2.}Diegimas}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Išvados}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Pakeitimų sąrašas}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Šaltiniai}{18}
