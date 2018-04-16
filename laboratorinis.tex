@@ -310,9 +310,27 @@
                 }
             \end{table}
 
-        \sectionnonum{Išvados}
+    \sectionnonum{Techninė analizė}
+      Šis skyrius aprašo siūlomą techinė architektūrą, sukurtą atsižvelgiant į pastabas, iškeltas atliekant robastiškumo analizę bei preliminarią projekto peržiūrą.
+      \subsection{Komponentinė sandara}
+        \begin{figure}[H]
+          \centering
+          \includegraphics[scale=0.8]{img/Komponentai}
+          \caption{Sistemos komponentinė sandara (UML Komponentų diagrama)}
+          \label{components}
+        \end{figure}
+        Visą sistemą galima suskaidyti į tris pagrindinius komponentus: Klientinę dalį, Serverinę dalį bei Duomenų bazę. Šių trijų komponentų rolės atitinka "3-tier" architektūros sandarą - Atvaizdavimo sluoksnį, Verslo taisyklių sluoksnį bei Duomenų sluoksnį. Smulkesnis skaidymas į komponentus yra pagal funkcinius sistemos aspektus. Tai padaryta siekiant užtikrinti vykdomojo kodo testavimo ir bendrai palaikymo paprastumą, bei suteikia galimybę paprastesniam plečiamumui bei lankstensiam diegimui. 
+      \subsection{Diegimas}
+        \begin{figure}[H]
+          \centering
+          \includegraphics[scale=0.8]{img/Diegimas}
+          \caption{Sistemos diegimas (UML Diegimo diagrama, UML Manifestacijos diagrama)}
+          \label{deployment}
+        \end{figure}
+        Sistemos komponentų diegimas yra trivialus, pilnai dengiantis užsakovo dabartinius poreikius. Klasikinis kliento-serverio sistemos diegimas leidžia lengvai susieti įrangos kūrimo procesą su pastoviu atnaujinimų (Conitinuous Integration), be to, minimizuoja tikimybę sisteminių klaidų dėl tinklo ar diegimo kliūčių. Kylant poreikiui, šią sistemą lengva klasterizuoti, kas garantuoja stabilumą ir nebrangų palaikomumą.
+    \sectionnonum{Išvados}
 			Išanalizavus ir papildžius sistemos reikalavimus, apibrėžus struktūrinį dalykinės srities modelį bei detaliai aprašius sistemos atliekamas užduotis ir sumaketavus eskizus, sistema paruošta kūrimo pradžiai.
-		\sectionnonum{Pakeitimų sąrašas}
+    \sectionnonum{Pakeitimų sąrašas}
 			Pakeitimų sąrašas:
 			\begin{enumerate}
 				\item pridėtas reikalavimas \ref{datos_ivedimas}, anksčiau vartotojas pats turėjo įvesti datą,
