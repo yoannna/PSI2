@@ -51,7 +51,8 @@
         \tableofcontents
       
         \sectionnonum{Įvadas}
-             Šiame dokumente bus aprašyti sistemos „Skrydžių bilietų paieška“ reikalavimai, struktūrinės dalykinės srities modelis ir užduotys. Reikalavimai išskirstyti į funkcinius ir nefunkcinius. Funkciniai reikalavimai nurodo pagrindines sistemos funkcijas, o nefunkciniai - nurodo kaip tas funkcijas sistema turi atlikti. Struktūrinės dalykinės srities modelis yra pateikiamas UML klasių diagramomis kartu su žodynais - sąrašu esybių su jų aprašymais. Paskutiniame skyriuje pateikiamos sistemos užduotys su jų aprašymais.
+             Šis dokumentas papildo pirmąjį "Skrydžių bilietų paieškos sistemos" dokumentą. Antroje versijoje yra atliekama robastiškumo analizė, preliminari projekto peržiūra ir apibrežiama techninė sistemos architektūra. Kaip ir pirmojoje dokumento versijoje, dokumente nurodomi sistemos reikalavimai, Statinė programų sistemos struktūra, užduotys ir, papildomai prisideda, techninė analizė. Reikalavimai išskirstyti į funkcinius ir nefunkcinius. Funkciniai reikalavimai nurodo pagrindines sistemos funkcijas, o nefunkciniai - nurodo kaip tas funkcijas sistema turi atlikti. Struktūrinės dalykinės srities modelis yra pateikiamas UML klasių diagramomis kartu su žodynais - sąrašu esybių su jų aprašymais. Užduočių skyrius aprašo sistemos atliekamas užduotis ir pasitelkus robastiškumo diagramomis parodyta kaip ir kokios sistemos dalys jas atliks. Techninės analizės skyriuje yra analizuojami techniniai sistemos aspektai - sistemos komponentai ir sistemos diegimas.
+ 
         \section{Reikalavimai}
 			Šiame skyriuje išvardyti programų sistemos funkciniai ir nefunkciniai reikalavimai.
             \subsection{Funkciniai reikalavimai}
@@ -130,7 +131,7 @@
                     	\item \label{optimalus} Optimalesnis skrydis yra tas kurio kainos ir skrydžio trukmės santykis yra mažesnis.
                 \end{enumerate}
       
-        \section{Struktūrinis dalykinės srities modelis}
+        \section{Statinė programų sistemos struktūra}
             Šiame skyriuje pateikiamas struktūrinis nagrinėjamos dalykinės srities modelis. Modelis pateikiamas UML klasių diagramomis kartu su žodynu - sąrašu esybių su jų aprašymais. Skyriaus pabaigoje pateikiama reikalavimų - struktūrinio dalykinės srities modelio atsekamumo matrica.
             \subsection{Klasių diagrama}
                 \begin{figure}[H]
@@ -378,18 +379,13 @@
         \end{figure}
         Sistemos komponentų diegimas yra trivialus, pilnai dengiantis užsakovo dabartinius poreikius. Klasikinis kliento-serverio sistemos diegimas leidžia lengvai susieti įrangos kūrimo procesą su pastoviu atnaujinimų (Conitinuous Integration), be to, minimizuoja tikimybę sisteminių klaidų dėl tinklo ar diegimo kliūčių. Kylant poreikiui, šią sistemą lengva klasterizuoti, kas garantuoja stabilumą ir nebrangų palaikomumą.
     \sectionnonum{Išvados}
-			Išanalizavus ir papildžius sistemos reikalavimus, apibrėžus struktūrinį dalykinės srities modelį bei detaliai aprašius sistemos atliekamas užduotis ir sumaketavus eskizus, sistema paruošta kūrimo pradžiai.
+			Atlikus robastiškumo analizę, preliminarią projekto peržiūrą ir apibrežus techninę sistemos architektūrą (dalį ICONIX proceso žingsnių) pastebėjome, kad šioje darbo fazėje pirminiai sistemos reikalavimai atitinka sistemos numatomas užduotis, todėl nebuvo keisti sistemos reikalavimai.
 		\sectionnonum{Pakeitimų sąrašas}
 			Pakeitimų sąrašas:
 			\begin{enumerate}
-				\item pridėtas reikalavimas \ref{datos_ivedimas}, anksčiau vartotojas pats turėjo įvesti datą,
-				\item vietoje vieno rūšiavimo mygtuko, pridėti trys mygtukai,
-				\item apibrėžta kas yra detali skrydžio informacija (žr. \ref{skrydzio_info}),
-				\item tiksliau apibrėžtos operacinės sistemos ir naršyklės, kurias turi palaikyti sistema (žr. \ref{operacines_sistemos}),
-				\item apibrėžta koks yra optimalesnis skrydis (žr. \ref{optimalus}),
-				\item tiksliai nurodyta, kad sistema turi priėjimą prie aviakompanijų duomenų bazių (žr. \ref{avia_db}),
-				\item nurodyta, kad sistema bus lietuvių kalba, anksčiau projekte nebuvo nurodyta lokalizacija (žr. \ref{lokalizacija}),
-				\item suteikta galimybė vartotojui ieškoti skrydžio tik į vieną pusę (žr. \ref{viena_puse}).
+				\item Skyrius "Struktūrinis dalykinės srities modelis" perdarytas į "Statinė programų sistemos struktūra",
+				\item Apibrėžta techninė sistemos analizė,
+				\item Užduočių aprašymuose pridėtos robastiškumo diagramos.
 			\end{enumerate}
         \sectionnonum{Šaltiniai}
         Analizuojant kuriamą sistemą, kuriant sistemos reikalavimus, apibrėžiant struktūrinį dalykinės sryties modelį bei aprašant sistemos atliekamas užduotis buvo remtasi šia literatūra:
