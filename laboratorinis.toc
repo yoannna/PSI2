@@ -30,16 +30,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.}Užduočių aprašymai}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.}Reikalavimų - užduočių atsekamumo matrica}{13}
+\contentsline {subsection}{\numberline {3.2.}Reikalavimų - užduočių atsekamumo matrica}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.}Techninė analizė}{14}
+\contentsline {section}{\numberline {4.}Techninė analizė}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.}Komponentinė sandara}{14}
+\contentsline {subsection}{\numberline {4.1.}Komponentinė sandara}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.}Diegimas}{15}
+\contentsline {subsection}{\numberline {4.2.}Diegimas}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Išvados}{16}
+\contentsline {section}{Išvados}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Pakeitimų sąrašas}{17}
+\contentsline {section}{Pakeitimų sąrašas}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Šaltiniai}{18}
+\contentsline {section}{Šaltiniai}{23}
