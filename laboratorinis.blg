@@ -1,9 +1,9 @@
 [0] Config.pm:302> INFO - This is Biber 2.10
 [0] Config.pm:305> INFO - Logfile is 'laboratorinis.blg'
-[40] biber-MSWIN32:313> INFO - === 
-[81] Biber.pm:371> INFO - Reading 'laboratorinis.bcf'
-[220] Biber.pm:857> INFO - Found 0 citekeys in bib section 0
-[229] Utils.pm:193> WARN - The file 'laboratorinis.bcf' does not contain any citations!
-[239] bbl.pm:617> INFO - Writing 'laboratorinis.bbl' with encoding 'UTF-8'
-[239] bbl.pm:720> INFO - Output to laboratorinis.bbl
-[240] Biber.pm:110> INFO - WARNINGS: 1
+[39] biber-MSWIN32:313> INFO - === 
+[73] Biber.pm:371> INFO - Reading 'laboratorinis.bcf'
+[172] Biber.pm:857> INFO - Found 0 citekeys in bib section 0
+[179] Utils.pm:193> WARN - The file 'laboratorinis.bcf' does not contain any citations!
+[190] bbl.pm:617> INFO - Writing 'laboratorinis.bbl' with encoding 'UTF-8'
+[190] bbl.pm:720> INFO - Output to laboratorinis.bbl
+[192] Biber.pm:110> INFO - WARNINGS: 1

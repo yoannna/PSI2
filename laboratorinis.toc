@@ -36,9 +36,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1.}Komponentinė sandara}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.}Diegimas}{20}
+\contentsline {subsection}{\numberline {4.2.}Diegimas}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Išvados}{21}
+\contentsline {section}{Išvados ir rezultatai}{21}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Pakeitimų sąrašas}{22}
 \defcounter {refsection}{0}\relax 
