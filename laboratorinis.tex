@@ -132,8 +132,9 @@
                 \end{enumerate}
       
         \section{Statinė programų sistemos struktūra}
-            Šiame skyriuje pateikiamas struktūrinis nagrinėjamos dalykinės srities modelis. Modelis pateikiamas UML klasių diagramomis kartu su žodynu - sąrašu esybių su jų aprašymais. Skyriaus pabaigoje pateikiama reikalavimų - struktūrinio dalykinės srities modelio atsekamumo matrica.
+            Šiame skyriuje pateikiamas struktūrinis nagrinėjamos dalykinės srities modelis. Modelis pateikiamas UML klasių diagramomis kartu su žodynu (žr. skyrius "Klasių diagrama") - sąrašu esybių su jų aprašymais. Skyriaus pabaigoje pateikiama reikalavimų - struktūrinio dalykinės srities modelio atsekamumo matrica (žr. skyrius "Reikalavimų - struktūrinio dalykinės srities modelio atsekamumo matrica").
             \subsection{Klasių diagrama}
+            Čia pateikiama ir aprašoma sistemos klasių diagrama ir pateikiamas jos žodynas
                 \begin{figure}[H]
                     \centering
                     \includegraphics[scale=0.5]{img/class_diagram}
@@ -151,7 +152,7 @@
                 \end{enumerate}
     
             \subsection{Reikalavimų - struktūrinio dalykinės srities modelio atsekamumo matrica}
-            Šiame skyriuje yra pateikiama reikalavimų - struktūrinės dalykinės srities modelio atsekamumo matrica. Matricoje pavaizduotos dalykinės srities modelio esybės bei sistemos funkciniai reikalavimai. Reikalavimų - struktūrinio dalykinės srities modelio atsekamumo matrica padeda susieti dalykinės srities modelio esybes su sistemos funkciniais(arba ne funkciniais) reikalavimais.
+            Šiame skyriuje yra pateikiama reikalavimų - struktūrinės dalykinės srities modelio atsekamumo matrica (žr. \ref{Reikalavimų - struktūrinio dalykinės srities modelio atsekamumo matrica}). Matricoje pavaizduotos dalykinės srities modelio esybės bei sistemos funkciniai reikalavimai. Reikalavimų - struktūrinio dalykinės srities modelio atsekamumo matrica padeda susieti dalykinės srities modelio esybes su sistemos funkciniais(arba ne funkciniais) reikalavimais.
             \begin{table}[H]\footnotesize
                 \centering
                 \caption{Reikalavimų - struktūrinio dalykinės srities modelio atsekamumo matrica}
@@ -176,10 +177,11 @@
                     \hline 
                     \end{tabular}
                 }
+                \label{Reikalavimų - struktūrinio dalykinės srities modelio atsekamumo matrica}
             \end{table}
       
         \section{Užduotys}
-        Šiame skyriuje pateikiamos sistemos atliekamos užduotys. Visos sistemos atliekamos užduotys yra atvaizduojamos užduočių diagramoje. Atvaizdavus užduotis užduočių diagramoje, kiekviena užduotis yra detaliai aprašoma. Prie užduoties aprašymo yra pateikiami ir alternatyvūs scenarijai. Užduotims aprašyti taip pat yra naudojami ir kuriamos sistemos eskizai, leidžiantys geriau suprasti ir įsivaizduoti sistemos atliekamas užduotis. Skyriaus pabaigoje yra pateikiama ir reikalavimų - užduočių atsekamumo matrica.
+        Šiame skyriuje pateikiamos sistemos atliekamos užduotys. Visos sistemos atliekamos užduotys yra atvaizduojamos užduočių diagramoje (žr. \ref{Užduočių diagrama}). Atvaizdavus užduotis užduočių diagramoje, kiekviena užduotis yra detaliai aprašoma. Prie užduoties aprašymo yra pateikiami ir alternatyvūs scenarijai. Užduotims aprašyti taip pat yra naudojami ir kuriamos sistemos eskizai, leidžiantys geriau suprasti ir įsivaizduoti sistemos atliekamas užduotis. Skyriaus pabaigoje yra pateikiama ir reikalavimų - užduočių atsekamumo matrica.
             \begin{figure}[H]
                 \centering
                 \includegraphics[scale=1]{img/use_case}
@@ -363,23 +365,26 @@
     \section{Techninė analizė}
       Šis skyrius aprašo siūlomą techinė architektūrą, sukurtą atsižvelgiant į pastabas, iškeltas atliekant robastiškumo analizę bei preliminarią projekto peržiūrą.
       \subsection{Komponentinė sandara}
+      Čia pateikiama sistemos komponentinė sandara ir jos aprašymas
         \begin{figure}[H]
           \centering
           \includegraphics[scale=0.45]{img/Komponentai}
           \caption{Sistemos komponentinė sandara (UML Komponentų diagrama)}
           \label{components}
         \end{figure}
-        Visą sistemą galima suskaidyti į tris pagrindinius komponentus: Klientinę dalį, Serverinę dalį bei Duomenų bazę. Šių trijų komponentų rolės atitinka "3-tier" architektūros sandarą - Atvaizdavimo sluoksnį, Verslo taisyklių sluoksnį bei Duomenų sluoksnį. Smulkesnis skaidymas į komponentus yra pagal funkcinius sistemos aspektus. Tai padaryta siekiant užtikrinti vykdomojo kodo testavimo ir bendrai palaikymo paprastumą, bei suteikia galimybę paprastesniam plečiamumui bei lankstensiam diegimui. 
+        Visą sistemą galima suskaidyti į tris pagrindinius komponentus: Klientinę dalį, Serverinę dalį bei Duomenų bazę (žr. \ref{components}). Šių trijų komponentų rolės atitinka "3-tier" architektūros sandarą - Atvaizdavimo sluoksnį, Verslo taisyklių sluoksnį bei Duomenų sluoksnį. Smulkesnis skaidymas į komponentus yra pagal funkcinius sistemos aspektus. Tai padaryta siekiant užtikrinti vykdomojo kodo testavimo ir bendrai palaikymo paprastumą, bei suteikia galimybę paprastesniam plečiamumui bei lankstensiam diegimui. 
       \subsection{Diegimas}
+      Čia aprašomas sistemos diegimas
         \begin{figure}[H]
           \centering
           \includegraphics[scale=0.7]{img/Diegimas}
           \caption{Sistemos diegimas (UML Diegimo diagrama, UML Manifestacijos diagrama)}
           \label{deployment}
         \end{figure}
-        Sistemos komponentų diegimas yra trivialus, pilnai dengiantis užsakovo dabartinius poreikius. Klasikinis kliento-serverio sistemos diegimas leidžia lengvai susieti įrangos kūrimo procesą su pastoviu atnaujinimų (Conitinuous Integration), be to, minimizuoja tikimybę sisteminių klaidų dėl tinklo ar diegimo kliūčių. Kylant poreikiui, šią sistemą lengva klasterizuoti, kas garantuoja stabilumą ir nebrangų palaikomumą.
-    \sectionnonum{Išvados}
-			Atlikus robastiškumo analizę, preliminarią projekto peržiūrą ir apibrežus techninę sistemos architektūrą (dalį ICONIX proceso žingsnių) pastebėjome, kad šioje darbo fazėje pirminiai sistemos reikalavimai atitinka sistemos numatomas užduotis, todėl nebuvo keisti sistemos reikalavimai.
+        Sistemos komponentų diegimas yra trivialus, pilnai dengiantis užsakovo dabartinius poreikius. Klasikinis kliento-serverio sistemos diegimas leidžia lengvai susieti įrangos kūrimo procesą su pastoviu atnaujinimų (Conitinuous Integration), be to, minimizuoja tikimybę sisteminių klaidų dėl tinklo ar diegimo kliūčių. Kylant poreikiui, šią sistemą lengva klasterizuoti, kas garantuoja stabilumą ir nebrangų palaikomumą (žr. \ref{deployment}).
+    \sectionnonum{Išvados ir rezultatai}
+			Atlikus robastiškumo analizę, preliminarią projekto peržiūrą ir apibrežus techninę sistemos architektūrą (dalį ICONIX proceso žingsnių) pastebėjome, kad šioje darbo fazėje pirminiai sistemos reikalavimai atitinka sistemos numatomas užduotis, todėl programų sistemos reikalavimai nebuvo keisti.
+			
 		\sectionnonum{Pakeitimų sąrašas}
 			\begin{enumerate}
 				\item Skyrius "Struktūrinis dalykinės srities modelis" perdarytas į "Statinė programų sistemos struktūra",
