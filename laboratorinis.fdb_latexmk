@@ -1,13 +1,13 @@
 # Fdb version 3
-["biber laboratorinis"] 1524500740 "laboratorinis.bcf" "laboratorinis.bbl" "laboratorinis" 1524500771
-  "laboratorinis.bcf" 1524500771 88092 25bf07e334a64b7e0fdbdc0278c8c030 ""
+["biber laboratorinis"] 1527542393 "laboratorinis.bcf" "laboratorinis.bbl" "laboratorinis" 1527542651
+  "laboratorinis.bcf" 1527542651 88092 25bf07e334a64b7e0fdbdc0278c8c030 ""
   (generated)
   "laboratorinis.blg"
   "laboratorinis.bbl"
-["pdflatex"] 1524500742 "c:/Users/osmit/Documents/mif 4 sem/PSI/latex/PSI2/laboratorinis.tex" "laboratorinis.pdf" "laboratorinis" 1524500771
+["pdflatex"] 1527542624 "c:/Users/osmit/Documents/mif 4 sem/PSI/latex/PSI2/laboratorinis.tex" "laboratorinis.pdf" "laboratorinis" 1527542651
   "LTPlius.sty" 1520291526 5271 82092db8e14bb68b7654ebd0e0d9eda5 ""
   "VUMIFPSkursinis.cls" 1520928189 9986 86a03357352b8c9044b67f973d8ba95e ""
-  "c:/Users/osmit/Documents/mif 4 sem/PSI/latex/PSI2/laboratorinis.tex" 1524500707 28021 839364634329002ff254b57cd780d275 ""
+  "c:/Users/osmit/Documents/mif 4 sem/PSI/latex/PSI2/laboratorinis.tex" 1527541890 33991 e7c7c926cc3e8bfd1585965fd4d280cc ""
   "c:/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1520286104 3332 103109f5612ad95229751940c61aada0 ""
   "c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1520284736 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1520284736 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -169,16 +169,16 @@
   "img/search.png" 1520928224 1765802 602cdd20c523d7ee648a40f175c661a8 ""
   "img/search_one_way.png" 1521235754 1774216 4954f911c905ae30e495e36dbba065ef ""
   "img/use_case.png" 1521407304 40274 f3eb3705cbafe1c2a5dd6dfc08a8dd90 ""
-  "laboratorinis.aux" 1524500771 8535 cfadfa27fd4eef011db778505523c0e0 ""
-  "laboratorinis.bbl" 1524500742 486 5e94f251ea8a419bbae6173a1e9a9c1d "biber laboratorinis"
-  "laboratorinis.run.xml" 1524500771 2517 514e2b0e3f3cba935df54708dc6b95f5 ""
-  "laboratorinis.tex" 1524500707 28021 839364634329002ff254b57cd780d275 ""
-  "laboratorinis.toc" 1524500771 2430 62f878bc81afd9022d2b28eb2778bb00 ""
+  "laboratorinis.aux" 1527542651 9434 d77eef2620546f724bdae0bf3aa89e72 ""
+  "laboratorinis.bbl" 1527542544 486 5e94f251ea8a419bbae6173a1e9a9c1d "biber laboratorinis"
+  "laboratorinis.run.xml" 1527542650 2517 514e2b0e3f3cba935df54708dc6b95f5 ""
+  "laboratorinis.tex" 1527541890 33991 e7c7c926cc3e8bfd1585965fd4d280cc ""
+  "laboratorinis.toc" 1527542650 3119 6886e74a36cd0825102440d123edba0a ""
   "lithuanian.lbx" 1520291526 25153 becc01ef2367b0d9b261a25d1fe85305 ""
   (generated)
+  "laboratorinis.run.xml"
   "laboratorinis.pdf"
   "laboratorinis.bcf"
-  "laboratorinis.log"
   "laboratorinis.toc"
+  "laboratorinis.log"
   "laboratorinis.aux"
-  "laboratorinis.run.xml"

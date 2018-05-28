@@ -382,6 +382,103 @@
           \label{deployment}
         \end{figure}
         Sistemos komponentų diegimas yra trivialus, pilnai dengiantis užsakovo dabartinius poreikius. Klasikinis kliento-serverio sistemos diegimas leidžia lengvai susieti įrangos kūrimo procesą su pastoviu atnaujinimų (Conitinuous Integration), be to, minimizuoja tikimybę sisteminių klaidų dėl tinklo ar diegimo kliūčių. Kylant poreikiui, šią sistemą lengva klasterizuoti, kas garantuoja stabilumą ir nebrangų palaikomumą (žr. \ref{deployment}pav.).
+    \section{Testavimo planas ir scenarijai}
+        \subsection{Skrydžių paieškos langas}
+            \noindent\textbf{Reikalavimai testui:} Atidarytas skrydžių paieškos langas. \\
+
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas suveda skirtingus išvykimo ir atvykimo miestus.
+                    \item Suveda būsimą kelionės pirmyn datos intervalą („Data nuo“ yra ankstesnė arba lygi „Datai iki“).
+                    \item Spaudžia „Ieškoti“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Atsidaro skrydžių paieškos rezultatų langas, kuriame rodomas paieškos kriterijus atitinkančių skrydžių į vieną pusę sąrašas.\\
+            
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas pažymi „Atgal“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Kelionės atgal datos intervalo įvedimo laukai tampa redaguojami.\\
+            
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas suveda skirtingus išvykimo ir atvykimo miestus.
+                    \item Suveda būsimą kelionės pirmyn datos intervalą („Data nuo“ yra ankstesnė arba lygi „Datai iki“).
+                    \item Pažymi „Atgal“.
+                    \item Suveda būsimą kelionės atgal datos intervalą („Data nuo“ yra ankstesnė arba lygi „Datai iki“).
+                    \item Spaudžia „Ieškoti“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Atsidaro skrydžių paieškos rezultatų langas, kuriame rodomas paieškos kriterijus atitinkančių skrydžių į abi puses sąrašas.\\
+            
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas suveda vienodus išvykimo ir atvykimo miestus.
+                    \item Suveda būsimą kelionės pirmyn datos intervalą („Data nuo“ yra ankstesnė arba lygi „Datai iki“).
+                    \item Spaudžia „Ieškoti“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Miestų įvedimo laukai paryškinami raudonai.\\
+            
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas suveda išvykimo miestą.
+                    \item Suveda būsimą kelionės pirmyn datos intervalą („Data nuo“ yra ankstesnė arba lygi „Datai iki“).
+                    \item Spaudžia „Ieškoti“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Atvykimo miesto įvedimo laukas paryškinamas raudonai.\\
+            
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas suveda atvykimo miestą.
+                    \item Suveda būsimą kelionės pirmyn datos intervalą („Data nuo“ yra ankstesnė arba lygi „Datai iki“).
+                    \item Spaudžia „Ieškoti“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Išvykimo miesto įvedimo laukas paryškinamas raudonai.\\
+            
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas suveda būsimą kelionės pirmyn datos intervalą („Data nuo“ yra ankstesnė arba lygi „Datai iki“).
+                    \item Spaudžia „Ieškoti“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Miestų įvedimo laukai paryškinami raudonai.\\
+            
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas suveda skirtingus išvykimo ir atvykimo miestus.
+                    \item Suveda būsimą kelionės pirmyn datos intervalą („Data nuo“ yra vėlesnė už „Datą iki“).
+                    \item Spaudžia „Ieškoti“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Skrydžio pirmyn datos intervalo įvedimo laukai paryškinami raudonai.\\
+            
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas suveda skirtingus išvykimo ir atvykimo miestus.
+                    \item Spaudžia „Ieškoti“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Skrydžio pirmyn datos intervalo įvedimo laukai paryškinami raudonai.\\
+            
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas suveda skirtingus išvykimo ir atvykimo miestus.
+                    \item Suveda būsimą kelionės pirmyn datos intervalą („Data nuo“ yra ankstesnė arba lygi „Datai iki“).
+                    \item Pažymi „Atgal“.
+                    \item Suveda būsimą kelionės atgal datos intervalą („Data nuo“ yra vėlesnė už „Datą iki“).
+                    \item Spaudžia „Ieškoti“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Skrydžio atgal datos intervalo įvedimo laukai paryškinami raudonai.\\
+            
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas suveda skirtingus išvykimo ir atvykimo miestus.
+                    \item Suveda būsimą kelionės pirmyn datos intervalą („Data nuo“ yra ankstesnė arba lygi „Datai iki“).
+                    \item Pažymi „Atgal“.
+                    \item Spaudžia „Ieškoti“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Skrydžio atgal datos intervalo įvedimo laukai paryškinami raudonai.\\
+            
+        \subsection{Rezultatų filtravimas}
+        \subsection{Rezultatų rūšiavimas}
+        \subsection{Skrydžio informacijos peržiūra}
+        \subsection{Nukreipimas į bilietų platintojo puslapį}
     \sectionnonum{Išvados ir rezultatai}
 			Atlikus robastiškumo analizę, preliminarią projekto peržiūrą ir apibrežus techninę sistemos architektūrą (dalį ICONIX proceso žingsnių) pastebėjome, kad šioje darbo fazėje pirminiai sistemos reikalavimai atitinka sistemos numatomas užduotis, todėl programų sistemos reikalavimai nebuvo keisti.
 			
