@@ -393,6 +393,13 @@
                     \item Spaudžia „Ieškoti“.
                 \end{enumerate}
             \textbf{Rezultatas:} Atsidaro skrydžių paieškos rezultatų langas, kuriame rodomas paieškos kriterijus atitinkančių skrydžių į vieną pusę sąrašas.\\
+
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas suveda tesingus paieškos kriterijus, pagal kuriuos rezultatų nėra.
+                    \item Spaudžia „Ieškoti“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Parodomas pranešimas, kad rezultatų nėra.\\
             
             \noindent\textbf{Scenarijus:}
                 \begin{enumerate}
@@ -476,9 +483,102 @@
             \textbf{Rezultatas:} Skrydžio atgal datos intervalo įvedimo laukai paryškinami raudonai.\\
             
         \subsection{Rezultatų filtravimas}
+            \noindent\textbf{Reikalavimai testui:} Atidarytas skrydžių paieškos rezultatų langas. \\
+
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas pasirenka filtruoti pagal persėdimų skaičių.
+                    \item Spaudžia „Filtruoti“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Rodomi paieškos rezultatai tik su pasirinktu persėdimu skaičiumi.\\
+
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas pasirenka filtruoti pagal kompaniją.
+                    \item Spaudžia „Filtruoti“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Rodomi paieškos rezultatai tik su pasirinkta kompanija.\\
+
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas pasirenka filtruoti pagal persėdimų skaičių.
+                    \item Pasirenka filtruoti pagal kompaniją.
+                    \item Spaudžia „Filtruoti“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Rodomi paieškos rezultatai tik su pasirinkta kompanija ir persėdimu skaičiumi.\\
+
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas pasirenka filtruoti pagal kriterijus, neatitinkančius nė vieno paieškos rezultato.
+                    \item Spaudžia „Filtruoti“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Rodomas pranešimas, kad nėra paieškos rezultatų, atitinkančių pasirinktus kriterijus.\\
+
         \subsection{Rezultatų rūšiavimas}
-        \subsection{Skrydžio informacijos peržiūra}
+            \noindent\textbf{Reikalavimai testui:} Atidarytas skrydžių paieškos rezultatų langas. \\
+
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas spaudžia mygtuką „Greičiausi“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Rodomas skrydžių paieškos rezultatų sarašas surušiuotas pagal kelionės trukmę nuo trumpiausios iki ilgiausios.\\
+
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas spaudžia mygtuką „Pigiausi“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Rodomas skrydžių paieškos rezultatų sarašas surušiuotas pagal kelionės kainą nuo mažiausios iki didžiausios.\\
+
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas spaudžia mygtuką „Optimaliausi“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Rodomas skrydžių paieškos rezultatų sarašas surušiuotas nuo optimaliausio iki mažiausiai optimalaus rezultato.\\
+
+        \subsection{Skrydžių paieškos rezultato informacijos peržiūra}
+            \noindent\textbf{Reikalavimai testui:} Atidarytas skrydžių paieškos rezultatų langas.\\
+
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas spaudžia ant pasirinkto skrydžio.
+                \end{enumerate}
+            \textbf{Rezultatas:} Atidaromas dialogas su išvykimo vieta ir laiku, atvykimo vieta ir laiku, skrydžio trukme, kaina, kompanija, persėdimu skaičiumi.\\
+
         \subsection{Nukreipimas į bilietų platintojo puslapį}
+            \noindent\textbf{Reikalavimai testui:} Atidarytas skrydžio detalių dialogas. \\
+
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas spaudžia mygtuką „Pirkti“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Vartotojas nukreipiamas į bilieto pardavėjo puslapį.\\
+
+        \subsection{Būsimų skrydžių peržiūra}
+            \noindent\textbf{Reikalavimai testui:} Atidarytas skrydžių paieškos rezultatų langas, yra būsimų skrydžių.\\
+
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas spaudžia mygtuką „Būsimi skrydžiai“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Atidaromas langas su būsimų skrydžių sąrašu.\\
+
+            \noindent\textbf{Reikalavimai testui:} Atidarytas skrydžių paieškos rezultatų langas, nėra būsimų skrydžių.\\
+
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas spaudžia mygtuką „Būsimi skrydžiai“.
+                \end{enumerate}
+            \textbf{Rezultatas:} Rodomas pranešimas, kad būsimų skrydžių nėra.\\
+
+        \subsection{Būsimo skrydžio informacijos peržiūra}
+            \noindent\textbf{Reikalavimai testui:} Atidarytas būsimų skrydžių langas.\\
+
+            \noindent\textbf{Scenarijus:}
+                \begin{enumerate}
+                    \item Vartotojas spaudžia ant pasirinkto skrydžio.
+                \end{enumerate}
+            \textbf{Rezultatas:} Atidaromas dialogas su išvykimo vieta ir laiku, atvykimo vieta ir laiku, skrydžio trukme.\\
+
     \sectionnonum{Išvados ir rezultatai}
 			Atlikus robastiškumo analizę, preliminarią projekto peržiūrą ir apibrežus techninę sistemos architektūrą (dalį ICONIX proceso žingsnių) pastebėjome, kad šioje darbo fazėje pirminiai sistemos reikalavimai atitinka sistemos numatomas užduotis, todėl programų sistemos reikalavimai nebuvo keisti.
 			
