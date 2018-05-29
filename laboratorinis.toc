@@ -30,32 +30,32 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.}Užduočių aprašymai}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.}Reikalavimų - užduočių atsekamumo matrica}{17}
+\contentsline {subsection}{\numberline {3.2.}Reikalavimų - užduočių atsekamumo matrica}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.}Techninė analizė}{19}
+\contentsline {section}{\numberline {4.}Techninė analizė}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.}Komponentinė sandara}{19}
+\contentsline {subsection}{\numberline {4.1.}Komponentinė sandara}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.}Diegimas}{19}
+\contentsline {subsection}{\numberline {4.2.}Diegimas}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.}Testavimo planas ir scenarijai}{21}
+\contentsline {section}{\numberline {5.}Testavimo planas ir scenarijai}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.}Skrydžių paieškos langas}{21}
+\contentsline {subsection}{\numberline {5.1.}Skrydžių paieškos langas}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.}Rezultatų filtravimas}{23}
+\contentsline {subsection}{\numberline {5.2.}Rezultatų filtravimas}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.}Rezultatų rūšiavimas}{24}
+\contentsline {subsection}{\numberline {5.3.}Rezultatų rūšiavimas}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.}Skrydžių paieškos rezultato informacijos peržiūra}{25}
+\contentsline {subsection}{\numberline {5.4.}Skrydžių paieškos rezultato informacijos peržiūra}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.5.}Nukreipimas į bilietų platintojo puslapį}{25}
+\contentsline {subsection}{\numberline {5.5.}Nukreipimas į bilietų platintojo puslapį}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.6.}Būsimų skrydžių peržiūra}{25}
+\contentsline {subsection}{\numberline {5.6.}Būsimų skrydžių peržiūra}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.7.}Būsimo skrydžio informacijos peržiūra}{26}
+\contentsline {subsection}{\numberline {5.7.}Būsimo skrydžio informacijos peržiūra}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Išvados ir rezultatai}{27}
+\contentsline {section}{Išvados ir rezultatai}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Pakeitimų sąrašas}{28}
+\contentsline {section}{Pakeitimų sąrašas}{30}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Šaltiniai}{29}
+\contentsline {section}{Šaltiniai}{31}
