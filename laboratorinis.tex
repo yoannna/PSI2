@@ -51,8 +51,8 @@
         \tableofcontents
       
         \sectionnonum{Įvadas}
-             Šis dokumentas papildo pirmąjį „Skrydžių bilietų paieškos sistemos“ dokumentą. Antroje versijoje yra atliekama robastiškumo analizė, preliminari projekto peržiūra ir apibrežiama techninė sistemos architektūra. Kaip ir pirmojoje dokumento versijoje, dokumente nurodomi sistemos reikalavimai, Statinė programų sistemos struktūra, užduotys ir, papildomai prisideda, techninė analizė. Reikalavimai išskirstyti į funkcinius ir nefunkcinius. Funkciniai reikalavimai nurodo pagrindines sistemos funkcijas, o nefunkciniai - nurodo kaip tas funkcijas sistema turi atlikti. Struktūrinės dalykinės srities modelis yra pateikiamas UML klasių diagramomis kartu su žodynais - sąrašu esybių su jų aprašymais. Užduočių skyrius aprašo sistemos atliekamas užduotis ir pasitelkus robastiškumo diagramomis parodyta kaip ir kokios sistemos dalys jas atliks. Techninės analizės skyriuje yra analizuojami techniniai sistemos aspektai - sistemos komponentai ir sistemos diegimas.
- 
+             Šis dokumentas papildo antrąjį „Skrydžių bilietų paieškos sistemos“ dokumentą. Šioje versijoje yra braižomos sekų diagramos, atliekama projekto kritinė analizė, įgyvendinamas sistemos prototipas, apibrežiami testavimo scenarijai, atliekama kodo peržiūra ir modelio atnaujinimas. Kaip ir antrojoje dokumento versijoje, dokumente nurodomi sistemos reikalavimai, Statinė programų sistemos struktūra, papildytos užduotys, techninė analizė, papildomai atsiranda testavimo planas ir scenarijai.
+             Reikalavimai išskirstyti į funkcinius ir nefunkcinius. Funkciniai reikalavimai nurodo pagrindines sistemos funkcijas, o nefunkciniai - nurodo kaip tas funkcijas sistema turi atlikti. Struktūrinės dalykinės srities modelis yra pateikiamas UML klasių diagramomis kartu su žodynais - sąrašu esybių su jų aprašymais. Užduočių skyrius aprašo sistemos atliekamas užduotis,  pasitelkus robastiškumo ir sekų diagramomis, parodyta kaip ir kokios sistemos dalys jas atliks. Techninės analizės skyriuje yra analizuojami techniniai sistemos aspektai - sistemos komponentai ir sistemos diegimas. Testavimo plane yra aprašytas sistemos testavimo užduotys su scenarijais ir jų rezultatais.
         \section{Reikalavimai}
 			Šiame skyriuje išvardyti programų sistemos funkciniai ir nefunkciniai reikalavimai.
             \subsection{Funkciniai reikalavimai}
@@ -383,6 +383,7 @@
         \end{figure}
         Sistemos komponentų diegimas yra trivialus, pilnai dengiantis užsakovo dabartinius poreikius. Klasikinis kliento-serverio sistemos diegimas leidžia lengvai susieti įrangos kūrimo procesą su pastoviu atnaujinimų (Conitinuous Integration), be to, minimizuoja tikimybę sisteminių klaidų dėl tinklo ar diegimo kliūčių. Kylant poreikiui, šią sistemą lengva klasterizuoti, kas garantuoja stabilumą ir nebrangų palaikomumą (žr. \ref{deployment}pav.).
     \section{Testavimo planas ir scenarijai}
+    Šiame skyriuje yra pateiktos testavimo užduotys ir jų scenarijai.
         \subsection{Skrydžių paieškos langas}
             \noindent\textbf{Reikalavimai testui:} Atidarytas skrydžių paieškos langas. \\
 
@@ -580,13 +581,13 @@
             \textbf{Rezultatas:} Atidaromas dialogas su išvykimo vieta ir laiku, atvykimo vieta ir laiku, skrydžio trukme.\\
 
     \sectionnonum{Išvados ir rezultatai}
-			Atlikus robastiškumo analizę, preliminarią projekto peržiūrą ir apibrežus techninę sistemos architektūrą (dalį ICONIX proceso žingsnių) pastebėjome, kad šioje darbo fazėje pirminiai sistemos reikalavimai atitinka sistemos numatomas užduotis, todėl programų sistemos reikalavimai nebuvo keisti.
+			Nubraižius kiekvienai sistemos užduočiai sekų diagramas, atlikus kritinę projekto peržiūrą, sukūrus sistemos prototipą, atlikus kodo peržiūrą ir modelio atnaujinimą, padarėme išvadą, kad nereikia koreguoti numatytų sistemos užduočių ir reikalavimų.
 			
 		\sectionnonum{Pakeitimų sąrašas}
 			\begin{enumerate}
-				\item Skyrius „Struktūrinis dalykinės srities modelis“ perdarytas į „Statinė programų sistemos struktūra“,
-				\item Apibrėžta techninė sistemos analizė,
-				\item Užduočių aprašymuose pridėtos robastiškumo diagramos.
+				\item Sistemos užduotys papildytos sekų diagramomis,
+				\item Apibrėžta sistemos testavimo planas,
+				\item Aprašyti sistemos testavimo plano užduočių scenarijai.
 			\end{enumerate}
         \sectionnonum{Šaltiniai}
         Analizuojant kuriamą sistemą, kuriant sistemos reikalavimus, apibrėžiant struktūrinį dalykinės sryties modelį bei aprašant sistemos atliekamas užduotis buvo remtasi šia literatūra:
