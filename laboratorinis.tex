@@ -210,6 +210,7 @@
                     \newpage\textbf{Alternatyvūs scenarijai:}
                     \begin{itemize}
                         \item Jei vartotojas neįveida atvykimo ir/ar išvykimo miestų, jam paspaudus ant mygtuko „Ieškoti“ jis nėra nukreipiamas į rezultatų langą. Išvykimo ar atvykimo miesto įvedimo laukas su neįvesta reikšme (arba abu), paženklinami raudonai.
+                        \item Jei pagal paieškos kriterijus sistema neranda skrydžių, tai vartotojui yra pranešama, kad tokių skrydžių nėra ir liekama paieškos lange.
                     \end{itemize}
 
                     \begin{figure}[H]
@@ -244,6 +245,7 @@
                     \textbf{Alternatyvūs scenarijai:}
                     \begin{itemize}
                         \item Jei vartotojas neįveida atvykimo ir/ar išvykimo miestų, jam paspaudus ant mygtuko „Ieškoti“ jis nėra nukreipiamas į rezultatų langą. Išvykimo ar atvykimo miesto įvedimo laukas su neįvesta reikšme (arba abu), paženklinami raudonai.
+                        \item Jei pagal paieškos kriterijus sistema neranda skrydžių, tai vartotojui yra pranešama, kad tokių skrydžių nėra ir liekama paieškos lange.
                     \end{itemize}
 
                     \item \textbf{Rušiuoti paieškos rezultatus}\\
@@ -272,6 +274,7 @@
                     \\\textbf{Alternatyvūs scenarijai:}
                     \begin{itemize}
                         \item Vartotojui pakartotinai paspaudus ant jau prieš tai pažymėta filtro reikšmės, rezultatai iš karto atsinaujina, o konkretus pažymėtas filtras nuimamas. Kai visi filtrai yra nuimti, rezultatai atsivaizduoja netaikant jiems jokio filtravimo.
+                        \item Jeigu nėra rezultatų atitinkančių vartotojo nustatytą filtrą yra rodomas tusčias sąrašas.
                     \end{itemize}
 
                     \begin{figure}[H]
@@ -630,13 +633,14 @@
             \textbf{Rezultatas:} Atidaromas dialogas su išvykimo vieta ir laiku, atvykimo vieta ir laiku, skrydžio trukme.\\
 
     \sectionnonum{Išvados ir rezultatai}
-			Nubraižius kiekvienai sistemos užduočiai sekų diagramas, atlikus kritinę projekto peržiūrą, sukūrus sistemos prototipą, atlikus kodo peržiūrą ir modelio atnaujinimą, padarėme išvadą, kad nereikia koreguoti numatytų sistemos užduočių ir reikalavimų.
+			Nubraižius kiekvienai sistemos užduočiai sekų diagramas, atlikus kritinę projekto peržiūrą, sukūrus sistemos prototipą, atlikus kodo peržiūrą ir modelio atnaujinimą, pastebėjome, kad kai kurios užduotys neapibrežia kai kurių alternatyvių scenarijų, taigi mes jas papildėme.
 			
 		\sectionnonum{Pakeitimų sąrašas}
 			\begin{enumerate}
 				\item Sistemos užduotys papildytos sekų diagramomis,
 				\item Apibrėžta sistemos testavimo planas,
-				\item Aprašyti sistemos testavimo plano užduočių scenarijai.
+				\item Aprašyti sistemos testavimo plano užduočių scenarijai,
+				\item Papidyti užduočių U1, U2 ir U4 alternatvūs scenarijai.
 			\end{enumerate}
         \sectionnonum{Šaltiniai}
         Analizuojant kuriamą sistemą, kuriant sistemos reikalavimus, apibrėžiant struktūrinį dalykinės sryties modelį bei aprašant sistemos atliekamas užduotis buvo remtasi šia literatūra:
